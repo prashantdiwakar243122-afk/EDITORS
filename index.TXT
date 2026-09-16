@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="google-site-verification" content="by-CX7MP6ABuHkz-pSGbhAjsKx3-9Id2hJ1kxInLZec" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EDITORS by PRASHANT | Video Editing Studio</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#070707;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(7,7,7,.85);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid #222;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:900;
+    letter-spacing:2px;
+    color:#fff;
+}
+
+.logo span{
+    color:#fff;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:25px;
+    font-size:14px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#fff;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:120px 20px 60px;
+
+    background:
+    radial-gradient(
+        circle at center,
+        #222 0%,
+        #070707 45%,
+        #000 100%
+    );
+}
+
+.hero h1{
+    font-size:clamp(50px,9vw,110px);
+    line-height:.9;
+    letter-spacing:-5px;
+    font-weight:900;
+    color:#fff;
+}
+
+.hero h1 span{
+    color:#fff;
+}
+
+.hero p{
+    margin:30px auto;
+    max-width:650px;
+    color:#fff;
+    font-size:18px;
+    line-height:1.7;
+}
+
+/* ================= BUTTON ================= */
+
+.btn{
+    display:inline-block;
+    padding:15px 28px;
+    margin:8px;
+    border:1px solid #555;
+    border-radius:50px;
+    text-decoration:none;
+    color:#fff;
+    background:#111;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:#fff;
+    color:#000;
+    transform:translateY(-2px);
+}
+
+/* ================= SECTION ================= */
+
+section{
+    padding:100px 7%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.title h2{
+    font-size:45px;
+    margin-bottom:12px;
+    color:#fff;
+}
+
+.title p{
+    color:#fff;
+}
+
+.number{
+    color:#fff;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+/* ================= SERVICES ================= */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    padding:35px 25px;
+    background:#101010;
+    border:1px solid #222;
+    border-radius:18px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#666;
+}
+
+.card h3{
+    margin-bottom:15px;
+    font-size:22px;
+    color:#fff;
+}
+
+.card p{
+    color:#fff;
+    line-height:1.6;
+}
+
+/* ================= PORTFOLIO ================= */
+
+.portfolio{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.project{
+    height:330px;
+    background:#080808;
+    border:1px solid #222;
+    border-radius:18px;
+    overflow:hidden;
+    position:relative;
+    transition:.3s;
+}
+
+.project:hover{
+    transform:scale(1.02);
+    border-color:#555;
+}
+
+.project video{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    background:#000;
+}
+
+/* ================= CAPCUT PRO ================= */
+
+.capcut-section{
+    position:relative;
+    overflow:hidden;
+
+    background:
+    radial-gradient(
+        circle at 50% 0%,
+        #252525 0%,
+        #0b0b0b 45%,
+        #050505 100%
+    );
+
+    border-top:1px solid #222;
+    border-bottom:1px solid #222;
+}
+
+.capcut-container{
+    max-width:1100px;
+    margin:auto;
+    text-align:center;
+}
+
+.capcut-badge{
+    display:inline-block;
+    padding:8px 18px;
+    border:1px solid #444;
+    border-radius:50px;
+    color:#fff;
+    font-size:12px;
+    letter-spacing:2px;
+    margin-bottom:25px;
+}
+
+.capcut-title{
+    font-size:clamp(45px,7vw,85px);
+    font-weight:900;
+    letter-spacing:-3px;
+    margin-bottom:20px;
+    color:#fff;
+}
+
+.capcut-title span{
+    color:#fff;
+}
+
+.capcut-description{
+    max-width:700px;
+    margin:0 auto 40px;
+    color:#fff;
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* ================= CAPCUT FEATURES ================= */
+
+.capcut-features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-top:50px;
+}
+
+.capcut-card{
+    background:rgba(20,20,20,.8);
+    border:1px solid #292929;
+    border-radius:20px;
+    padding:30px 22px;
+    transition:.3s;
+}
+
+.capcut-card:hover{
+    transform:translateY(-7px);
+    border-color:#666;
+    background:#151515;
+}
+
+.capcut-icon{
+    font-size:35px;
+    margin-bottom:18px;
+}
+
+.capcut-card h3{
+    font-size:20px;
+    margin-bottom:12px;
+    color:#fff;
+}
+
+.capcut-card p{
+    color:#fff;
+    line-height:1.6;
+}
+
+/* ================= DOWNLOAD BOX ================= */
+
+.capcut-download{
+    margin-top:55px;
+    padding:40px 20px;
+    background:#0d0d0d;
+    border:1px solid #292929;
+    border-radius:25px;
+    text-align:center;
+}
+
+.capcut-download h3{
+    font-size:28px;
+    margin-bottom:12px;
+    color:#fff;
+}
+
+.capcut-download > p{
+    color:#fff;
+    margin-bottom:20px;
+    line-height:1.6;
+}
+
+/* ================= DOWNLOAD POINTS ================= */
+
+.download-points{
+    margin:25px 0;
+    font-size:17px;
+    line-height:2;
+    color:#fff;
+}
+
+.download-points div{
+    margin:5px 0;
+    color:#fff;
+}
+
+/* ================= DOWNLOAD BUTTON ================= */
+
+.download-btn{
+    display:inline-block;
+    padding:17px 35px;
+    border-radius:50px;
+    border:1px solid #777;
+    background:#fff;
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.download-btn:hover{
+    background:#fff;
+    color:#000;
+    transform:translateY(-3px);
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+}
+
+.about p{
+    color:#fff;
+    line-height:1.9;
+    font-size:18px;
+}
+
+.about strong{
+    color:#fff;
+}
+
+/* ================= PRICING ================= */
+
+.pricing{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:20px;
+    max-width:1000px;
+    margin:auto;
+}
+
+.price{
+    background:#101010;
+    border:1px solid #292929;
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    transition:.3s;
+}
+
+.price:hover{
+    transform:translateY(-7px);
+    border-color:#666;
+}
+
+.price h3{
+    font-size:22px;
+    color:#fff;
+}
+
+.price .amount{
+    font-size:38px;
+    font-weight:bold;
+    margin:20px 0;
+    color:#fff;
+}
+
+.price p{
+    color:#fff;
+    line-height:2;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+    text-align:center;
+    background:#0c0c0c;
+}
+
+.contact h2{
+    font-size:45px;
+    margin-bottom:20px;
+    color:#fff;
+}
+
+.contact p{
+    color:#fff;
+    margin-bottom:30px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    text-align:center;
+    padding:30px;
+    border-top:1px solid #222;
+    color:#fff;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:700px){
+
+    nav{
+        padding:15px 5%;
+    }
+
+    nav .links{
+        display:none;
+    }
+
+    section{
+        padding:75px 5%;
+    }
+
+    .hero h1{
+        letter-spacing:-3px;
+    }
+
+    .project{
+        height:420px;
+    }
+
+    .capcut-title{
+        letter-spacing:-2px;
+    }
+
+    .capcut-download{
+        padding:30px 15px;
+    }
+
+    .download-btn{
+        width:100%;
+        max-width:300px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+    <div class="logo">
+        EDITORS <span>BY PRASHANT</span>
+    </div>
+
+    <div class="links">
+
+        <a href="#home">HOME</a>
+        <a href="#services">SERVICES</a>
+        <a href="#portfolio">PORTFOLIO</a>
+        <a href="#capcut">CAPCUT PRO</a>
+        <a href="#about">ABOUT</a>
+        <a href="#contact">CONTACT</a>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div>
+
+        <div class="number">
+            VIDEO EDITING • MOTION • CREATIVE
+        </div>
+
+        <h1>
+            EDIT<span>ORS</span>
+        </h1>
+
+        <p>
+            We turn your raw footage into powerful visuals.
+            Reels, Shorts, YouTube videos, cinematic edits and more.
+        </p>
+
+        <a href="#portfolio" class="btn">
+            VIEW WORK
+        </a>
+
+        <a href="#contact" class="btn">
+            HIRE ME
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section id="services">
+
+    <div class="title">
+
+        <h2>
+            Services
+        </h2>
+
+        <p>
+            Creative editing for modern content creators.
+        </p>
+
+    </div>
+
+
+    <div class="services">
+
+        <div class="card">
+
+            <div class="number">
+                01
+            </div>
+
+            <h3>
+                Reels Editing
+            </h3>
+
+            <p>
+                Fast cuts, beat sync, transitions,
+                captions and engaging effects.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="number">
+                02
+            </div>
+
+            <h3>
+                YouTube Editing
+            </h3>
+
+            <p>
+                Professional long-form editing with
+                clean storytelling and pacing.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="number">
+                03
+            </div>
+
+            <h3>
+                Cinematic Editing
+            </h3>
+
+            <p>
+                Color, sound design, cinematic transitions
+                and visual storytelling.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="number">
+                04
+            </div>
+
+            <h3>
+                Shorts
+            </h3>
+
+            <p>
+                High-retention vertical videos optimized
+                for social platforms.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PORTFOLIO ================= -->
+
+<section id="portfolio">
+
+    <div class="title">
+
+        <h2>
+            Portfolio
+        </h2>
+
+        <p>
+            My Latest Editing Work.
+        </p>
+
+    </div>
+
+
+    <div class="portfolio">
+
+        <!-- VIDEO 1 -->
+
+        <div class="project">
+
+            <video
+                controls
+                playsinline
+                preload="metadata"
+            >
+
+                <source
+                    src="video1.mp4"
+                    type="video/mp4"
+                >
+
+                Your browser does not support the video tag.
+
+            </video>
+
+        </div>
+
+
+        <!-- VIDEO 2 -->
+
+        <div class="project">
+
+            <video
+                controls
+                playsinline
+                preload="metadata"
+            >
+
+                <source
+                    src="video2.mp4"
+                    type="video/mp4"
+                >
+
+                Your browser does not support the video tag.
+
+            </video>
+
+        </div>
+
+
+        <!-- VIDEO 3 -->
+
+        <div class="project">
+
+            <video
+                controls
+                playsinline
+                preload="metadata"
+            >
+
+                <source
+                    src="video3.mp4"
+                    type="video/mp4"
+                >
+
+                Your browser does not support the video tag.
+
+            </video>
+
+        </div>
+
+
+        <!-- VIDEO 4 -->
+
+        <div class="project">
+
+            <video
+                controls
+                playsinline
+                preload="metadata"
+            >
+
+                <source
+                    src="video4.mp4"
+                    type="video/mp4"
+                >
+
+                Your browser does not support the video tag.
+
+            </video>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CAPCUT PRO ================= -->
+
+<section
+    class="capcut-section"
+    id="capcut"
+>
+
+    <div class="capcut-container">
+
+        <div class="capcut-badge">
+            PROFESSIONAL VIDEO EDITING
+        </div>
+
+
+        <h2 class="capcut-title">
+            CAPCUT <span>PRO</span>
+        </h2>
+
+
+        <p class="capcut-description">
+
+            Create professional videos with powerful
+            editing tools, creative effects, smooth
+            transitions and advanced features.
+
+            Perfect for Reels, Shorts, YouTube
+            and cinematic content.
+
+        </p>
+
+
+        <!-- CAPCUT FEATURES -->
+
+        <div class="capcut-features">
+
+
+            <div class="capcut-card">
+
+                <div class="capcut-icon">
+                    ✨
+                </div>
+
+                <h3>
+                    Premium Effects
+                </h3>
+
+                <p>
+                    Creative effects and visual
+                    enhancements for professional-looking videos.
+                </p>
+
+            </div>
+
+
+            <div class="capcut-card">
+
+                <div class="capcut-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Pro Transitions
+                </h3>
+
+                <p>
+                    Smooth transitions for dynamic
+                    Reels, Shorts and cinematic edits.
+                </p>
+
+            </div>
+
+
+            <div class="capcut-card">
+
+                <div class="capcut-icon">
+                    🎨
+                </div>
+
+                <h3>
+                    Advanced Editing
+                </h3>
+
+                <p>
+                    Professional color and visual
+                    editing tools for modern content.
+                </p>
+
+            </div>
+
+
+            <div class="capcut-card">
+
+                <div class="capcut-icon">
+                    🤖
+                </div>
+
+                <h3>
+                    AI Tools
+                </h3>
+
+                <p>
+                    Modern AI-powered features to
+                    speed up your creative workflow.
+                </p>
+
+            </div>
+
+
+            <div class="capcut-card">
+
+                <div class="capcut-icon">
+                    📝
+                </div>
+
+                <h3>
+                    Pro Text
+                </h3>
+
+                <p>
+                    Stylish captions, titles and
+                    animated text for your content.
+                </p>
+
+            </div>
+
+
+            <div class="capcut-card">
+
+                <div class="capcut-icon">
+                    📱
+                </div>
+
+                <h3>
+                    Reels & Shorts
+                </h3>
+
+                <p>
+                    Create vertical content for
+                    modern social media platforms.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= DIRECT DOWNLOAD ================= -->
+
+        <div class="capcut-download">
+
+            <h3>
+                CAPCUT DOWNLOAD
+            </h3>
+
+            <p>
+                Download the authorized CapCut
+                installer directly from this website.
+            </p>
+
+
+            <div class="download-points">
+
+                <div>
+                    ✓ No VPN Required
+                </div>
+
+                <div>
+                    ✓ All Pro Features Unlocked
+                </div>
+
+            </div>
+
+
+            <a
+                href="CapCut-Official.APK"
+                download
+                class="download-btn"
+            >
+                ⬇ DOWNLOAD CAPCUT
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+    <div class="title">
+
+        <h2>
+            About
+        </h2>
+
+    </div>
+
+
+    <div class="about">
+
+        <p>
+
+            EDITORS is a creative video editing
+            studio by <strong>PRASHANT</strong>.
+
+            The goal is simple — transform ordinary
+            footage into visually powerful content
+            that gets attention.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRICING ================= -->
+
+<section>
+
+    <div class="title">
+
+        <h2>
+            Pricing
+        </h2>
+
+        <p>
+            Simple packages for creators.
+        </p>
+
+    </div>
+
+
+    <div class="pricing">
+
+
+        <div class="price">
+
+            <h3>
+                STARTER
+            </h3>
+
+            <div class="amount">
+                ₹499
+            </div>
+
+            <p>
+
+                1 Reel<br>
+                Basic Effects<br>
+                Beat Sync<br>
+                Captions
+
+            </p>
+
+        </div>
+
+
+        <div class="price">
+
+            <h3>
+                CREATOR
+            </h3>
+
+            <div class="amount">
+                ₹999
+            </div>
+
+            <p>
+
+                3 Reels<br>
+                Advanced Effects<br>
+                Motion Graphics<br>
+                Color Enhancement
+
+            </p>
+
+        </div>
+
+
+        <div class="price">
+
+            <h3>
+                PRO
+            </h3>
+
+            <div class="amount">
+                ₹1999
+            </div>
+
+            <p>
+
+                5 Reels<br>
+                Advanced Editing<br>
+                Cinematic Effects<br>
+                Priority Delivery
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section
+    class="contact"
+    id="contact"
+>
+
+    <h2>
+        Let's Create.
+    </h2>
+
+
+    <p>
+
+        Have a video project?
+        Let's turn your idea into something powerful.
+
+    </p>
+
+
+    <!-- WHATSAPP -->
+
+    <a
+        class="btn"
+        href="https://wa.me/917819804091"
+        target="_blank"
+        rel="noopener"
+    >
+        💬 WhatsApp
+    </a>
+
+
+    <!-- INSTAGRAM -->
+
+    <a
+        class="btn"
+        href="https://www.instagram.com/prashantdiwakar2010/"
+        target="_blank"
+        rel="noopener"
+    >
+        Instagram
+    </a>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    © 2026 EDITORS BY PRASHANT.
+    All Rights Reserved.
+
+</footer>
+
+
+</body>
+</html>
