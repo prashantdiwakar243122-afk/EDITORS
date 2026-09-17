@@ -1,28 +1,13 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta name="google-site-verification" content="by-CX7MP6ABuHkz-pSGbhAjsKx3-9Id2hJ1kxInLZec" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="google-site-verification"
-content="by-CX7MP6ABuHkz-pSGbhAjsKx3-9Id2hJ1kxInLZec">
-
-<meta name="description"
-content="EDITORS by PRASHANT DIWAKAR - Professional Video Editing Studio">
-
-<title>EDITORS | Video Editing Studio</title>
+<title>EDITORS by PRASHANT | Video Editing Studio</title>
 
 <style>
-
-:root{
-    --bg:#050505;
-    --card:#0d0d0d;
-    --card2:#111;
-    --white:#fff;
-    --gray:#999;
-    --border:#242424;
-}
 
 *{
     margin:0;
@@ -33,1048 +18,472 @@ content="EDITORS by PRASHANT DIWAKAR - Professional Video Editing Studio">
 
 body{
     font-family:Arial,Helvetica,sans-serif;
-    background:var(--bg);
-    color:var(--white);
+    background:#070707;
+    color:#fff;
     overflow-x:hidden;
 }
 
-a{
-    color:inherit;
-    text-decoration:none;
-}
+/* ================= NAVBAR ================= */
 
-
-/* ================= HEADER ================= */
-
-header{
+nav{
     position:fixed;
     top:0;
-    left:0;
     width:100%;
     z-index:1000;
-
-    background:rgba(5,5,5,.82);
-    backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
-
-    border-bottom:1px solid rgba(255,255,255,.08);
-}
-
-.nav{
-    width:92%;
-    max-width:1400px;
-    min-height:78px;
-    margin:auto;
-
+    padding:18px 7%;
     display:flex;
-    align-items:center;
     justify-content:space-between;
-    gap:25px;
+    align-items:center;
+    background:rgba(7,7,7,.85);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid #222;
 }
 
 .logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-
-    font-size:18px;
+    font-size:24px;
     font-weight:900;
     letter-spacing:2px;
-}
-
-.logo-box{
-    width:31px;
-    height:31px;
-
-    display:grid;
-    place-items:center;
-
-    border:1px solid #fff;
-    border-radius:7px;
-
-    font-size:15px;
-}
-
-.links{
-    display:flex;
-    gap:25px;
-}
-
-.links a{
-    position:relative;
-
-    color:#999;
-
-    font-size:10px;
-    font-weight:bold;
-    letter-spacing:1.2px;
-
-    transition:.3s;
-}
-
-.links a:hover,
-.links a.active{
     color:#fff;
 }
 
-.links a::after{
-    content:"";
+.logo span{
+    color:#fff;
+}
 
-    position:absolute;
-    left:0;
-    bottom:-8px;
-
-    width:0;
-    height:1px;
-
-    background:#fff;
-
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:25px;
+    font-size:14px;
     transition:.3s;
 }
 
-.links a:hover::after,
-.links a.active::after{
-    width:100%;
+nav a:hover{
+    color:#fff;
 }
-
-.nav-btn{
-    padding:11px 18px;
-
-    border:1px solid #444;
-    border-radius:30px;
-
-    font-size:9px;
-    font-weight:bold;
-    letter-spacing:1px;
-
-    transition:.3s;
-}
-
-.nav-btn:hover{
-    background:#fff;
-    color:#000;
-}
-
 
 /* ================= HERO ================= */
 
 .hero{
     min-height:100vh;
-
-    padding:150px 4% 80px;
-
     display:flex;
     align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:120px 20px 60px;
 
     background:
     radial-gradient(
-        circle at 72% 45%,
-        #202020 0%,
-        #0b0b0b 30%,
-        #050505 70%
+        circle at center,
+        #222 0%,
+        #070707 45%,
+        #000 100%
     );
-}
-
-.hero-inner{
-    width:92%;
-    max-width:1400px;
-    margin:auto;
-
-    display:grid;
-    grid-template-columns:1.05fr .95fr;
-
-    gap:70px;
-    align-items:center;
-}
-
-.eyebrow{
-    display:flex;
-    align-items:center;
-    gap:12px;
-
-    color:#888;
-
-    font-size:10px;
-    font-weight:bold;
-    letter-spacing:2px;
-}
-
-.dot{
-    width:7px;
-    height:7px;
-
-    border-radius:50%;
-    background:#fff;
-
-    box-shadow:0 0 0 5px rgba(255,255,255,.06);
 }
 
 .hero h1{
-    margin-top:25px;
-
-    font-size:clamp(60px,9vw,125px);
-
-    line-height:.82;
-    letter-spacing:-8px;
-
+    font-size:clamp(50px,9vw,110px);
+    line-height:.9;
+    letter-spacing:-5px;
     font-weight:900;
-}
-
-.hero h1 span{
-    color:#666;
-}
-
-.hero-text{
-    max-width:620px;
-
-    margin-top:35px;
-
-    color:#999;
-
-    font-size:17px;
-    line-height:1.8;
-}
-
-.buttons{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-
-    margin-top:35px;
-}
-
-.btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:12px;
-
-    padding:15px 23px;
-
-    border-radius:40px;
-
-    font-size:10px;
-    font-weight:bold;
-    letter-spacing:1.2px;
-
-    transition:.3s;
-}
-
-.btn-white{
-    background:#fff;
-    color:#000;
-    border:1px solid #fff;
-}
-
-.btn-white:hover{
-    background:#ddd;
-    transform:translateY(-3px);
-}
-
-.btn-outline{
-    border:1px solid #444;
     color:#fff;
 }
 
-.btn-outline:hover{
+.hero h1 span{
+    color:#fff;
+}
+
+.hero p{
+    margin:30px auto;
+    max-width:650px;
+    color:#fff;
+    font-size:18px;
+    line-height:1.7;
+}
+
+/* ================= BUTTON ================= */
+
+.btn{
+    display:inline-block;
+    padding:15px 28px;
+    margin:8px;
+    border:1px solid #555;
+    border-radius:50px;
+    text-decoration:none;
+    color:#fff;
+    background:#111;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.btn:hover{
     background:#fff;
     color:#000;
-    border-color:#fff;
+    transform:translateY(-2px);
 }
 
+/* ================= SECTION ================= */
 
-/* ================= HERO VISUAL ================= */
-
-.visual{
-    display:flex;
-    justify-content:center;
+section{
+    padding:100px 7%;
 }
 
-.visual-box{
-    position:relative;
-
-    width:min(100%,540px);
-    aspect-ratio:4/5;
-
-    overflow:hidden;
-
-    border:1px solid #292929;
-
-    background:
-    radial-gradient(
-        circle,
-        #242424 0%,
-        #111 40%,
-        #070707 75%
-    );
-}
-
-.visual-box::before{
-    content:"";
-
-    position:absolute;
-    inset:15px;
-
-    border:1px solid #242424;
-}
-
-.visual-box::after{
-    content:"";
-
-    position:absolute;
-
-    top:50%;
-    left:0;
-
-    width:100%;
-    height:1px;
-
-    background:#222;
-}
-
-.frame-top,
-.frame-bottom{
-    position:absolute;
-
-    left:28px;
-    right:28px;
-
-    display:flex;
-    justify-content:space-between;
-
-    color:#666;
-
-    font-size:8px;
-    letter-spacing:1.5px;
-
-    z-index:2;
-}
-
-.frame-top{
-    top:27px;
-}
-
-.frame-bottom{
-    bottom:27px;
-}
-
-.play{
-    position:absolute;
-
-    top:50%;
-    left:50%;
-
-    transform:translate(-50%,-50%);
-
-    width:170px;
-    height:170px;
-
-    display:grid;
-    place-items:center;
-
-    border:1px solid #3b3b3b;
-    border-radius:50%;
-}
-
-.play::before{
-    content:"";
-
-    position:absolute;
-
-    width:220px;
-    height:220px;
-
-    border:1px solid #252525;
-    border-radius:50%;
-}
-
-.play::after{
-    content:"";
-
-    position:absolute;
-
-    width:270px;
-    height:270px;
-
-    border:1px solid #1c1c1c;
-    border-radius:50%;
-}
-
-.play-icon{
-    width:62px;
-    height:62px;
-
-    display:grid;
-    place-items:center;
-
-    padding-left:4px;
-
-    border:1px solid #555;
-    border-radius:50%;
-
-    font-size:17px;
-}
-
-.visual-text{
-    position:absolute;
-
-    bottom:20%;
-    left:0;
-    width:100%;
-
+.title{
     text-align:center;
-
-    color:rgba(255,255,255,.045);
-
-    font-size:clamp(60px,8vw,100px);
-    font-weight:900;
-    letter-spacing:-6px;
+    margin-bottom:60px;
 }
 
-
-/* ================= COMMON ================= */
-
-.section{
-    width:92%;
-    max-width:1400px;
-    margin:auto;
-
-    padding:130px 0;
+.title h2{
+    font-size:45px;
+    margin-bottom:12px;
+    color:#fff;
 }
 
-.label{
-    color:#888;
-
-    font-size:10px;
-    font-weight:bold;
-
-    letter-spacing:2px;
+.title p{
+    color:#fff;
 }
 
-.label span{
-    color:#444;
-    margin-right:10px;
+.number{
+    color:#fff;
+    font-size:13px;
+    margin-bottom:20px;
 }
-
-
-/* ================= INTRO ================= */
-
-.intro{
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:80px;
-
-    align-items:start;
-}
-
-.intro h2{
-    margin-top:20px;
-
-    font-size:clamp(45px,6vw,82px);
-
-    line-height:.9;
-    letter-spacing:-5px;
-}
-
-.intro h2 span{
-    color:#666;
-}
-
-.intro p{
-    max-width:550px;
-
-    margin-top:40px;
-
-    color:#999;
-
-    font-size:17px;
-    line-height:1.9;
-}
-
-.text-link{
-    display:inline-block;
-
-    margin-top:30px;
-
-    padding-bottom:8px;
-
-    border-bottom:1px solid #444;
-
-    font-size:10px;
-    font-weight:bold;
-    letter-spacing:1.5px;
-}
-
 
 /* ================= SERVICES ================= */
 
-.heading{
-    display:flex;
-    align-items:flex-end;
-    justify-content:space-between;
-
-    gap:30px;
-
-    margin-bottom:50px;
-}
-
-.heading h2{
-    margin-top:20px;
-
-    font-size:clamp(45px,6vw,80px);
-
-    line-height:.9;
-    letter-spacing:-5px;
-}
-
-.heading h2 span{
-    color:#666;
-}
-
-.service-grid{
+.services{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
-}
-
-.service{
-    min-height:300px;
-
-    padding:28px;
-
-    background:var(--card);
-
-    border:1px solid var(--border);
-
-    transition:.35s;
-}
-
-.service:hover{
-    transform:translateY(-8px);
-    border-color:#444;
-    background:var(--card2);
-}
-
-.service-num{
-    color:#555;
-    font-size:10px;
-}
-
-.service-icon{
-    margin-top:50px;
-
-    font-size:30px;
-    color:#aaa;
-}
-
-.service h3{
-    margin-top:25px;
-
-    font-size:18px;
-    letter-spacing:.5px;
-}
-
-.service p{
-    margin-top:15px;
-
-    color:#888;
-
-    font-size:13px;
-    line-height:1.7;
-}
-
-
-/* ================= STRIP ================= */
-
-.strip{
-    border-top:1px solid #222;
-    border-bottom:1px solid #222;
-
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-}
-
-.strip-item{
-    padding:25px 30px;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    border-right:1px solid #222;
-}
-
-.strip-item:last-child{
-    border-right:0;
-}
-
-.strip-item strong{
-    font-size:11px;
-    letter-spacing:1px;
-}
-
-.strip-item span{
-    color:#555;
-    font-size:9px;
-}
-
-
-/* ================= PORTFOLIO ================= */
-
-.portfolio-grid{
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:15px;
-}
-
-.portfolio-card{
-    position:relative;
-
-    height:360px;
-
-    overflow:hidden;
-
-    border:1px solid #222;
-
-    background:
-    radial-gradient(
-        circle at center,
-        #202020,
-        #080808 65%
-    );
-
-    transition:.35s;
-}
-
-.portfolio-card:hover{
-    transform:translateY(-6px);
-    border-color:#444;
-}
-
-.portfolio-card::after{
-    content:"";
-
-    position:absolute;
-    inset:0;
-
-    background:
-    linear-gradient(
-        transparent 45%,
-        rgba(0,0,0,.85)
-    );
-}
-
-.portfolio-num{
-    position:absolute;
-
-    top:22px;
-    left:22px;
-
-    color:#777;
-
-    font-size:10px;
-
-    z-index:2;
-}
-
-.portfolio-info{
-    position:absolute;
-
-    left:25px;
-    right:25px;
-    bottom:25px;
-
-    z-index:2;
-}
-
-.portfolio-info span{
-    color:#888;
-
-    font-size:8px;
-    letter-spacing:1.5px;
-}
-
-.portfolio-info strong{
-    display:block;
-
-    margin-top:8px;
-
-    font-size:17px;
-}
-
-
-/* ================= ABOUT ================= */
-
-.about-box{
-    padding:70px;
-
-    border:1px solid #222;
-
-    background:
-    radial-gradient(
-        circle at 80% 30%,
-        #191919,
-        #090909 55%
-    );
-}
-
-.about-box h2{
-    margin-top:25px;
-
-    max-width:800px;
-
-    font-size:clamp(45px,6vw,80px);
-
-    line-height:.9;
-    letter-spacing:-5px;
-}
-
-.about-box h2 span{
-    color:#666;
-}
-
-.about-box p{
-    max-width:750px;
-
-    margin-top:35px;
-
-    color:#999;
-
-    font-size:16px;
-    line-height:1.9;
-}
-
-
-/* ================= PRICING ================= */
-
-.pricing-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:15px;
-}
-
-.price-card{
-    padding:35px;
-    min-height:320px;
-
-    background:#0d0d0d;
-    border:1px solid #242424;
-
-    transition:.3s;
-}
-
-.price-card:hover{
-    transform:translateY(-6px);
-    border-color:#444;
-}
-
-.price-card h3{
-    margin-top:20px;
-    font-size:20px;
-}
-
-.price{
-    margin-top:25px;
-    font-size:38px;
-    font-weight:900;
-}
-
-.price-card p{
-    margin-top:15px;
-    color:#888;
-    line-height:1.7;
-    font-size:13px;
-}
-
-.price-card .btn{
-    margin-top:25px;
-}
-
-
-/* ================= CONTACT ================= */
-
-.contact-box{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-
-    padding:70px;
-
-    border:1px solid #222;
-    background:#090909;
-}
-
-.contact-box h2{
-    margin-top:20px;
-
-    font-size:clamp(45px,6vw,80px);
-
-    line-height:.9;
-    letter-spacing:-5px;
-}
-
-.contact-box h2 span{
-    color:#666;
-}
-
-.contact-info{
-    display:flex;
-    flex-direction:column;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:20px;
 }
 
-.contact-item{
-    padding:25px;
-
+.card{
+    padding:35px 25px;
+    background:#101010;
     border:1px solid #222;
-    background:#0d0d0d;
+    border-radius:18px;
+    transition:.3s;
 }
 
-.contact-item span{
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#666;
+}
+
+.card h3{
+    margin-bottom:15px;
+    font-size:22px;
+    color:#fff;
+}
+
+.card p{
+    color:#fff;
+    line-height:1.6;
+}
+
+/* ================= PORTFOLIO ================= */
+
+.portfolio{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.project{
+    height:330px;
+    background:#080808;
+    border:1px solid #222;
+    border-radius:18px;
+    overflow:hidden;
+    position:relative;
+    transition:.3s;
+}
+
+.project:hover{
+    transform:scale(1.02);
+    border-color:#555;
+}
+
+.project video{
+    width:100%;
+    height:100%;
     display:block;
-
-    color:#666;
-
-    font-size:9px;
-    letter-spacing:1.5px;
+    object-fit:cover;
+    background:#000;
 }
 
-.contact-item strong{
-    display:block;
+/* ================= CAPCUT PRO ================= */
 
-    margin-top:8px;
-
-    font-size:15px;
-}
-
-
-/* ================= CTA ================= */
-
-.cta{
-    text-align:center;
-
-    padding:150px 20px;
-
-    border-top:1px solid #222;
+.capcut-section{
+    position:relative;
+    overflow:hidden;
 
     background:
     radial-gradient(
-        circle at center,
-        #171717,
-        #050505 65%
+        circle at 50% 0%,
+        #252525 0%,
+        #0b0b0b 45%,
+        #050505 100%
     );
+
+    border-top:1px solid #222;
+    border-bottom:1px solid #222;
 }
 
-.cta h2{
-    margin-top:25px;
-
-    font-size:clamp(50px,8vw,105px);
-
-    line-height:.85;
-    letter-spacing:-6px;
+.capcut-container{
+    max-width:1100px;
+    margin:auto;
+    text-align:center;
 }
 
-.cta h2 span{
-    color:#666;
+.capcut-badge{
+    display:inline-block;
+    padding:8px 18px;
+    border:1px solid #444;
+    border-radius:50px;
+    color:#fff;
+    font-size:12px;
+    letter-spacing:2px;
+    margin-bottom:25px;
 }
 
-.cta p{
-    max-width:600px;
+.capcut-title{
+    font-size:clamp(45px,7vw,85px);
+    font-weight:900;
+    letter-spacing:-3px;
+    margin-bottom:20px;
+    color:#fff;
+}
 
-    margin:30px auto;
+.capcut-title span{
+    color:#fff;
+}
 
-    color:#888;
-
+.capcut-description{
+    max-width:700px;
+    margin:0 auto 40px;
+    color:#fff;
+    font-size:18px;
     line-height:1.8;
 }
 
+/* ================= CAPCUT FEATURES ================= */
+
+.capcut-features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-top:50px;
+}
+
+.capcut-card{
+    background:rgba(20,20,20,.8);
+    border:1px solid #292929;
+    border-radius:20px;
+    padding:30px 22px;
+    transition:.3s;
+}
+
+.capcut-card:hover{
+    transform:translateY(-7px);
+    border-color:#666;
+    background:#151515;
+}
+
+.capcut-icon{
+    font-size:35px;
+    margin-bottom:18px;
+}
+
+.capcut-card h3{
+    font-size:20px;
+    margin-bottom:12px;
+    color:#fff;
+}
+
+.capcut-card p{
+    color:#fff;
+    line-height:1.6;
+}
+
+/* ================= DOWNLOAD BOX ================= */
+
+.capcut-download{
+    margin-top:55px;
+    padding:40px 20px;
+    background:#0d0d0d;
+    border:1px solid #292929;
+    border-radius:25px;
+    text-align:center;
+}
+
+.capcut-download h3{
+    font-size:28px;
+    margin-bottom:12px;
+    color:#fff;
+}
+
+.capcut-download > p{
+    color:#fff;
+    margin-bottom:20px;
+    line-height:1.6;
+}
+
+/* ================= DOWNLOAD POINTS ================= */
+
+.download-points{
+    margin:25px 0;
+    font-size:17px;
+    line-height:2;
+    color:#fff;
+}
+
+.download-points div{
+    margin:5px 0;
+    color:#fff;
+}
+
+/* ================= DOWNLOAD BUTTON ================= */
+
+.download-btn{
+    display:inline-block;
+    padding:17px 35px;
+    border-radius:50px;
+    border:1px solid #777;
+    background:#fff;
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.download-btn:hover{
+    background:#fff;
+    color:#000;
+    transform:translateY(-3px);
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+}
+
+.about p{
+    color:#fff;
+    line-height:1.9;
+    font-size:18px;
+}
+
+.about strong{
+    color:#fff;
+}
+
+/* ================= PRICING ================= */
+
+.pricing{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:20px;
+    max-width:1000px;
+    margin:auto;
+}
+
+.price{
+    background:#101010;
+    border:1px solid #292929;
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    transition:.3s;
+}
+
+.price:hover{
+    transform:translateY(-7px);
+    border-color:#666;
+}
+
+.price h3{
+    font-size:22px;
+    color:#fff;
+}
+
+.price .amount{
+    font-size:38px;
+    font-weight:bold;
+    margin:20px 0;
+    color:#fff;
+}
+
+.price p{
+    color:#fff;
+    line-height:2;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+    text-align:center;
+    background:#0c0c0c;
+}
+
+.contact h2{
+    font-size:45px;
+    margin-bottom:20px;
+    color:#fff;
+}
+
+.contact p{
+    color:#fff;
+    margin-bottom:30px;
+}
 
 /* ================= FOOTER ================= */
 
 footer{
+    text-align:center;
+    padding:30px;
     border-top:1px solid #222;
-
-    padding:45px 4%;
-}
-
-.footer{
-    width:92%;
-    max-width:1400px;
-    margin:auto;
-
-    display:flex;
-    justify-content:space-between;
-    gap:40px;
-}
-
-.footer p{
-    max-width:350px;
-
-    margin-top:18px;
-
-    color:#666;
-
-    font-size:12px;
-    line-height:1.7;
-}
-
-.footer-links{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-
-    gap:15px 45px;
-}
-
-.footer-links a{
-    color:#777;
-
-    font-size:9px;
-    font-weight:bold;
-    letter-spacing:1px;
-}
-
-.footer-links a:hover{
     color:#fff;
 }
 
-.footer-bottom{
-    width:92%;
-    max-width:1400px;
-
-    margin:40px auto 0;
-
-    padding-top:20px;
-
-    border-top:1px solid #1c1c1c;
-
-    display:flex;
-    justify-content:space-between;
-
-    color:#555;
-
-    font-size:8px;
-    letter-spacing:1px;
-}
-
-
 /* ================= MOBILE ================= */
 
-@media(max-width:900px){
+@media(max-width:700px){
 
-    .links{
+    nav{
+        padding:15px 5%;
+    }
+
+    nav .links{
         display:none;
     }
 
-    .hero-inner{
-        grid-template-columns:1fr;
-    }
-
-    .hero{
-        padding-top:125px;
-    }
-
-    .visual{
-        margin-top:20px;
-    }
-
-    .intro{
-        grid-template-columns:1fr;
-        gap:30px;
-    }
-
-    .service-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .portfolio-grid{
-        grid-template-columns:1fr;
-    }
-
-    .portfolio-card{
-        height:400px;
-    }
-
-    .strip{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .strip-item:nth-child(2){
-        border-right:0;
-    }
-
-    .strip-item:nth-child(-n+2){
-        border-bottom:1px solid #222;
-    }
-
-    .about-box{
-        padding:40px 25px;
-    }
-
-    .pricing-grid{
-        grid-template-columns:1fr;
-    }
-
-    .contact-box{
-        grid-template-columns:1fr;
-        padding:40px 25px;
-    }
-
-    .footer{
-        flex-direction:column;
-    }
-
-}
-
-@media(max-width:550px){
-
-    .nav{
-        min-height:68px;
-    }
-
-    .nav-btn{
-        display:none;
+    section{
+        padding:75px 5%;
     }
 
     .hero h1{
-        letter-spacing:-5px;
+        letter-spacing:-3px;
     }
 
-    .hero-text{
-        font-size:15px;
+    .project{
+        height:420px;
     }
 
-    .section{
-        padding:90px 0;
+    .capcut-title{
+        letter-spacing:-2px;
     }
 
-    .heading{
-        align-items:flex-start;
-        flex-direction:column;
+    .capcut-download{
+        padding:30px 15px;
     }
 
-    .service-grid{
-        grid-template-columns:1fr;
-    }
-
-    .service{
-        min-height:270px;
-    }
-
-    .strip-item{
-        padding:20px 15px;
-    }
-
-    .cta{
-        padding:110px 20px;
-    }
-
-    .footer-bottom{
-        flex-direction:column;
-        gap:10px;
+    .download-btn{
+        width:100%;
+        max-width:300px;
     }
 
 }
@@ -1084,537 +493,617 @@ footer{
 
 <body>
 
+<!-- ================= NAVBAR ================= -->
 
-<!-- ================= HEADER ================= -->
+<nav>
 
-<header>
+    <div class="logo">
+        EDITORS <span>BY PRASHANT</span>
+    </div>
 
-<div class="nav">
+    <div class="links">
 
-<a href="#home" class="logo">
-    <span class="logo-box">E</span>
-    EDITORS
-</a>
+        <a href="#home">HOME</a>
+        <a href="#services">SERVICES</a>
+        <a href="#portfolio">PORTFOLIO</a>
+        <a href="#capcut">CAPCUT PRO</a>
+        <a href="#about">ABOUT</a>
+        <a href="#contact">CONTACT</a>
 
-<nav class="links">
-
-<a href="#home" class="active">HOME</a>
-<a href="#services">SERVICES</a>
-<a href="#portfolio">PORTFOLIO</a>
-<a href="#about">ABOUT</a>
-<a href="#pricing">PRICING</a>
-<a href="#contact">CONTACT</a>
+    </div>
 
 </nav>
 
-<a href="#contact" class="nav-btn">
-    LET'S TALK
-</a>
 
-</div>
-
-</header>
-
-
-<!-- ================= HOME ================= -->
+<!-- ================= HERO ================= -->
 
 <section class="hero" id="home">
 
-<div class="hero-inner">
+    <div>
 
-<div>
+        <div class="number">
+            VIDEO EDITING • MOTION • CREATIVE
+        </div>
 
-<div class="eyebrow">
-<span class="dot"></span>
-PROFESSIONAL VIDEO EDITING STUDIO
-</div>
+        <h1>
+            EDIT<span>ORS</span>
+        </h1>
 
-<h1>
-WE EDIT.
-<br>
-<span>YOU CREATE.</span>
-</h1>
+        <p>
+            We turn your raw footage into powerful visuals.
+            Reels, Shorts, YouTube videos, cinematic edits and more.
+        </p>
 
-<p class="hero-text">
-We turn raw footage into powerful visual stories.
-Reels, Shorts, YouTube videos, cinematic edits
-and creative content.
-</p>
+        <a href="#portfolio" class="btn">
+            VIEW WORK
+        </a>
 
-<div class="buttons">
+        <a href="#contact" class="btn">
+            HIRE ME
+        </a>
 
-<a href="#portfolio" class="btn btn-white">
-VIEW OUR WORK ↗
-</a>
-
-<a href="#contact" class="btn btn-outline">
-HIRE ME
-</a>
-
-</div>
-
-</div>
-
-
-<div class="visual">
-
-<div class="visual-box">
-
-<div class="frame-top">
-<span>EDITORS / 2026</span>
-<span>01—01</span>
-</div>
-
-<div class="play">
-
-<div class="play-icon">
-▶
-</div>
-
-</div>
-
-<div class="visual-text">
-EDIT
-</div>
-
-<div class="frame-bottom">
-<span>RAW → FINAL</span>
-<span>CREATIVE STUDIO</span>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= INTRO ================= -->
-
-<section class="section">
-
-<div class="intro">
-
-<div>
-
-<div class="label">
-<span>01</span> WHAT WE DO
-</div>
-
-<h2>
-YOUR FOOTAGE.
-<br>
-<span>OUR EDIT.</span>
-</h2>
-
-</div>
-
-<div>
-
-<p>
-Every frame has a purpose. EDITORS helps creators
-transform ordinary footage into engaging, polished
-and professional content.
-</p>
-
-<a href="#services" class="text-link">
-EXPLORE SERVICES →
-</a>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
 <!-- ================= SERVICES ================= -->
 
-<section class="section" id="services">
+<section id="services">
 
-<div class="heading">
+    <div class="title">
 
-<div>
+        <h2>
+            Services
+        </h2>
 
-<div class="label">
-<span>02</span> SERVICES
-</div>
+        <p>
+            Creative editing for modern content creators.
+        </p>
 
-<h2>
-WHAT WE
-<span>CREATE.</span>
-</h2>
-
-</div>
-
-</div>
+    </div>
 
 
-<div class="service-grid">
+    <div class="services">
 
-<div class="service">
+        <div class="card">
 
-<div class="service-num">01</div>
+            <div class="number">
+                01
+            </div>
 
-<div class="service-icon">◉</div>
+            <h3>
+                Reels Editing
+            </h3>
 
-<h3>REELS EDITING</h3>
+            <p>
+                Fast cuts, beat sync, transitions,
+                captions and engaging effects.
+            </p>
 
-<p>
-Fast cuts, beat sync, captions,
-transitions and engaging effects.
-</p>
-
-</div>
-
-
-<div class="service">
-
-<div class="service-num">02</div>
-
-<div class="service-icon">▶</div>
-
-<h3>YOUTUBE EDITING</h3>
-
-<p>
-Long-form editing with clean storytelling,
-pacing and professional structure.
-</p>
-
-</div>
+        </div>
 
 
-<div class="service">
+        <div class="card">
 
-<div class="service-num">03</div>
+            <div class="number">
+                02
+            </div>
 
-<div class="service-icon">✦</div>
+            <h3>
+                YouTube Editing
+            </h3>
 
-<h3>CINEMATIC EDITING</h3>
+            <p>
+                Professional long-form editing with
+                clean storytelling and pacing.
+            </p>
 
-<p>
-Color, sound design, cinematic transitions
-and visual storytelling.
-</p>
-
-</div>
+        </div>
 
 
-<div class="service">
+        <div class="card">
 
-<div class="service-num">04</div>
+            <div class="number">
+                03
+            </div>
 
-<div class="service-icon">▣</div>
+            <h3>
+                Cinematic Editing
+            </h3>
 
-<h3>SHORTS</h3>
+            <p>
+                Color, sound design, cinematic transitions
+                and visual storytelling.
+            </p>
 
-<p>
-High-retention vertical videos designed
-for modern social platforms.
-</p>
+        </div>
 
-</div>
 
-</div>
+        <div class="card">
+
+            <div class="number">
+                04
+            </div>
+
+            <h3>
+                Shorts
+            </h3>
+
+            <p>
+                High-retention vertical videos optimized
+                for social platforms.
+            </p>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- ================= STRIP ================= -->
-
-<div class="strip">
-
-<div class="strip-item">
-<strong>REELS</strong>
-<span>01</span>
-</div>
-
-<div class="strip-item">
-<strong>SHORTS</strong>
-<span>02</span>
-</div>
-
-<div class="strip-item">
-<strong>YOUTUBE</strong>
-<span>03</span>
-</div>
-
-<div class="strip-item">
-<strong>CINEMATIC</strong>
-<span>04</span>
-</div>
-
-</div>
-
-
 <!-- ================= PORTFOLIO ================= -->
 
-<section class="section" id="portfolio">
+<section id="portfolio">
 
-<div class="heading">
+    <div class="title">
 
-<div>
+        <h2>
+            Portfolio
+        </h2>
 
-<div class="label">
-<span>03</span> SELECTED WORK
-</div>
+        <p>
+            My Latest Editing Work.
+        </p>
 
-<h2>
-RECENT
-<span>EDITS.</span>
-</h2>
-
-</div>
-
-</div>
+    </div>
 
 
-<div class="portfolio-grid">
+    <div class="portfolio">
 
-<a href="#contact" class="portfolio-card">
+        <!-- VIDEO 1 -->
 
-<div class="portfolio-num">01</div>
+        <div class="project">
 
-<div class="portfolio-info">
+            <video
+                controls
+                playsinline
+                preload="metadata"
+            >
 
-<span>VIDEO EDITING</span>
+                <source
+                    src="video1.mp4"
+                    type="video/mp4"
+                >
 
-<strong>PROJECT ONE</strong>
+                Your browser does not support the video tag.
 
-</div>
+            </video>
 
-</a>
-
-
-<a href="#contact" class="portfolio-card">
-
-<div class="portfolio-num">02</div>
-
-<div class="portfolio-info">
-
-<span>SHORT FORM</span>
-
-<strong>PROJECT TWO</strong>
-
-</div>
-
-</a>
+        </div>
 
 
-<a href="#contact" class="portfolio-card">
+        <!-- VIDEO 2 -->
 
-<div class="portfolio-num">03</div>
+        <div class="project">
 
-<div class="portfolio-info">
+            <video
+                controls
+                playsinline
+                preload="metadata"
+            >
 
-<span>CINEMATIC</span>
+                <source
+                    src="video2.mp4"
+                    type="video/mp4"
+                >
 
-<strong>PROJECT THREE</strong>
+                Your browser does not support the video tag.
 
-</div>
+            </video>
 
-</a>
+        </div>
 
-</div>
+
+        <!-- VIDEO 3 -->
+
+        <div class="project">
+
+            <video
+                controls
+                playsinline
+                preload="metadata"
+            >
+
+                <source
+                    src="video3.mp4"
+                    type="video/mp4"
+                >
+
+                Your browser does not support the video tag.
+
+            </video>
+
+        </div>
+
+
+        <!-- VIDEO 4 -->
+
+        <div class="project">
+
+            <video
+                controls
+                playsinline
+                preload="metadata"
+            >
+
+                <source
+                    src="video4.mp4"
+                    type="video/mp4"
+                >
+
+                Your browser does not support the video tag.
+
+            </video>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CAPCUT PRO ================= -->
+
+<section
+    class="capcut-section"
+    id="capcut"
+>
+
+    <div class="capcut-container">
+
+        <div class="capcut-badge">
+            PROFESSIONAL VIDEO EDITING
+        </div>
+
+
+        <h2 class="capcut-title">
+            CAPCUT <span>PRO</span>
+        </h2>
+
+
+        <p class="capcut-description">
+
+            Create professional videos with powerful
+            editing tools, creative effects, smooth
+            transitions and advanced features.
+
+            Perfect for Reels, Shorts, YouTube
+            and cinematic content.
+
+        </p>
+
+
+        <!-- CAPCUT FEATURES -->
+
+        <div class="capcut-features">
+
+
+            <div class="capcut-card">
+
+                <div class="capcut-icon">
+                    ✨
+                </div>
+
+                <h3>
+                    Premium Effects
+                </h3>
+
+                <p>
+                    Creative effects and visual
+                    enhancements for professional-looking videos.
+                </p>
+
+            </div>
+
+
+            <div class="capcut-card">
+
+                <div class="capcut-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Pro Transitions
+                </h3>
+
+                <p>
+                    Smooth transitions for dynamic
+                    Reels, Shorts and cinematic edits.
+                </p>
+
+            </div>
+
+
+            <div class="capcut-card">
+
+                <div class="capcut-icon">
+                    🎨
+                </div>
+
+                <h3>
+                    Advanced Editing
+                </h3>
+
+                <p>
+                    Professional color and visual
+                    editing tools for modern content.
+                </p>
+
+            </div>
+
+
+            <div class="capcut-card">
+
+                <div class="capcut-icon">
+                    🤖
+                </div>
+
+                <h3>
+                    AI Tools
+                </h3>
+
+                <p>
+                    Modern AI-powered features to
+                    speed up your creative workflow.
+                </p>
+
+            </div>
+
+
+            <div class="capcut-card">
+
+                <div class="capcut-icon">
+                    📝
+                </div>
+
+                <h3>
+                    Pro Text
+                </h3>
+
+                <p>
+                    Stylish captions, titles and
+                    animated text for your content.
+                </p>
+
+            </div>
+
+
+            <div class="capcut-card">
+
+                <div class="capcut-icon">
+                    📱
+                </div>
+
+                <h3>
+                    Reels & Shorts
+                </h3>
+
+                <p>
+                    Create vertical content for
+                    modern social media platforms.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= DIRECT DOWNLOAD ================= -->
+
+        <div class="capcut-download">
+
+            <h3>
+                CAPCUT DOWNLOAD
+            </h3>
+
+            <p>
+                Download the authorized CapCut
+                installer directly from this website.
+            </p>
+
+
+            <div class="download-points">
+
+                <div>
+                    ✓ No VPN Required
+                </div>
+
+                <div>
+                    ✓ All Pro Features Unlocked
+                </div>
+
+            </div>
+
+
+            <a
+                href="CapCut-Official.APK"
+                download
+                class="download-btn"
+            >
+                ⬇ DOWNLOAD CAPCUT
+            </a>
+
+        </div>
+
+    </div>
 
 </section>
 
 
 <!-- ================= ABOUT ================= -->
 
-<section class="section" id="about">
+<section id="about">
 
-<div class="about-box">
+    <div class="title">
 
-<div class="label">
-<span>04</span> ABOUT EDITORS
-</div>
+        <h2>
+            About
+        </h2>
 
-<h2>
-BUILT FOR
-<span>CREATORS.</span>
-</h2>
+    </div>
 
-<p>
-EDITORS is a creative video editing studio presented by
-<strong>PRASHANT DIWAKAR</strong>. The goal is simple:
-transform ordinary footage into visually powerful
-content that gets attention.
-</p>
 
-<br>
+    <div class="about">
 
-<a href="#contact" class="btn btn-white">
-START A PROJECT ↗
-</a>
+        <p>
 
-</div>
+            EDITORS is a creative video editing
+            studio by <strong>PRASHANT</strong>.
+
+            The goal is simple — transform ordinary
+            footage into visually powerful content
+            that gets attention.
+
+        </p>
+
+    </div>
 
 </section>
 
 
 <!-- ================= PRICING ================= -->
 
-<section class="section" id="pricing">
+<section>
 
-<div class="heading">
+    <div class="title">
 
-<div>
+        <h2>
+            Pricing
+        </h2>
 
-<div class="label">
-<span>05</span> PRICING
-</div>
+        <p>
+            Simple packages for creators.
+        </p>
 
-<h2>
-SIMPLE
-<span>PLANS.</span>
-</h2>
-
-</div>
-
-</div>
+    </div>
 
 
-<div class="pricing-grid">
-
-<div class="price-card">
-
-<div class="label">01 / BASIC</div>
-
-<h3>SHORT VIDEO</h3>
-
-<div class="price">₹299+</div>
-
-<p>
-Basic cuts, transitions, music sync
-and simple captions.
-</p>
-
-<a href="#contact" class="btn btn-outline">
-GET STARTED →
-</a>
-
-</div>
+    <div class="pricing">
 
 
-<div class="price-card">
+        <div class="price">
 
-<div class="label">02 / CREATOR</div>
+            <h3>
+                STARTER
+            </h3>
 
-<h3>REELS PACKAGE</h3>
+            <div class="amount">
+                ₹499
+            </div>
 
-<div class="price">₹799+</div>
+            <p>
 
-<p>
-Professional reels editing with
-captions, effects and beat sync.
-</p>
+                1 Reel<br>
+                Basic Effects<br>
+                Beat Sync<br>
+                Captions
 
-<a href="#contact" class="btn btn-outline">
-GET STARTED →
-</a>
+            </p>
 
-</div>
+        </div>
 
 
-<div class="price-card">
+        <div class="price">
 
-<div class="label">03 / PRO</div>
+            <h3>
+                CREATOR
+            </h3>
 
-<h3>CINEMATIC</h3>
+            <div class="amount">
+                ₹999
+            </div>
 
-<div class="price">₹1499+</div>
+            <p>
 
-<p>
-Advanced editing, color, sound design
-and cinematic storytelling.
-</p>
+                3 Reels<br>
+                Advanced Effects<br>
+                Motion Graphics<br>
+                Color Enhancement
 
-<a href="#contact" class="btn btn-outline">
-GET STARTED →
-</a>
+            </p>
 
-</div>
+        </div>
 
-</div>
+
+        <div class="price">
+
+            <h3>
+                PRO
+            </h3>
+
+            <div class="amount">
+                ₹1999
+            </div>
+
+            <p>
+
+                5 Reels<br>
+                Advanced Editing<br>
+                Cinematic Effects<br>
+                Priority Delivery
+
+            </p>
+
+        </div>
+
+    </div>
 
 </section>
 
 
 <!-- ================= CONTACT ================= -->
 
-<section class="section" id="contact">
+<section
+    class="contact"
+    id="contact"
+>
 
-<div class="contact-box">
-
-<div>
-
-<div class="label">
-<span>06</span> CONTACT
-</div>
-
-<h2>
-LET'S
-<span>WORK.</span>
-</h2>
-
-<p style="margin-top:30px;color:#888;line-height:1.8;">
-Have a video project in mind?
-Send your footage and project details.
-Let's create something powerful together.
-</p>
-
-</div>
+    <h2>
+        Let's Create.
+    </h2>
 
 
-<div class="contact-info">
+    <p>
 
-<div class="contact-item">
-<span>CREATOR</span>
-<strong>PRASHANT DIWAKAR</strong>
-</div>
+        Have a video project?
+        Let's turn your idea into something powerful.
 
-<div class="contact-item">
-<span>SERVICE</span>
-<strong>VIDEO EDITING</strong>
-</div>
-
-<div class="contact-item">
-<span>PROJECT</span>
-<strong>REELS / SHORTS / YOUTUBE / CINEMATIC</strong>
-</div>
-
-</div>
-
-</div>
-
-</section>
+    </p>
 
 
-<!-- ================= CTA ================= -->
+    <!-- WHATSAPP -->
 
-<section class="cta">
+    <a
+        class="btn"
+        href="https://wa.me/917819804091"
+        target="_blank"
+        rel="noopener"
+    >
+        💬 WhatsApp
+    </a>
 
-<div class="label">
-<span>07</span> START A PROJECT
-</div>
 
-<h2>
-HAVE A STORY?
-<br>
-<span>LET'S EDIT IT.</span>
-</h2>
+    <!-- INSTAGRAM -->
 
-<p>
-Have a video project in mind?
-Let's turn your idea into something powerful.
-</p>
-
-<a href="#contact" class="btn btn-white">
-LET'S CREATE ↗
-</a>
+    <a
+        class="btn"
+        href="https://www.instagram.com/prashantdiwakar2010/"
+        target="_blank"
+        rel="noopener"
+    >
+        Instagram
+    </a>
 
 </section>
 
@@ -1623,51 +1112,11 @@ LET'S CREATE ↗
 
 <footer>
 
-<div class="footer">
-
-<div>
-
-<a href="#home" class="logo">
-<span class="logo-box">E</span>
-EDITORS
-</a>
-
-<p>
-Professional video editing studio
-presented by PRASHANT DIWAKAR.
-</p>
-
-</div>
-
-
-<div class="footer-links">
-
-<a href="#services">SERVICES</a>
-<a href="#portfolio">PORTFOLIO</a>
-<a href="#about">ABOUT</a>
-<a href="#pricing">PRICING</a>
-<a href="#contact">CONTACT</a>
-<a href="#home">BACK TO TOP ↑</a>
-
-</div>
-
-</div>
-
-
-<div class="footer-bottom">
-
-<span>
-© 2026 EDITORS. ALL RIGHTS RESERVED.
-</span>
-
-<span>
-PRESENTED BY PRASHANT DIWAKAR
-</span>
-
-</div>
+    © 2026 EDITORS BY PRASHANT.
+    All Rights Reserved.
 
 </footer>
 
+
 </body>
 </html>
-```
