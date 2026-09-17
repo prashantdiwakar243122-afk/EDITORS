@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,6 +55,11 @@ nav{
     color:#fff;
 }
 
+nav .links{
+    display:flex;
+    align-items:center;
+}
+
 nav a{
     color:#fff;
     text-decoration:none;
@@ -66,6 +70,23 @@ nav a{
 
 nav a:hover{
     color:#aaa;
+}
+
+/* LOGIN NAV BUTTON */
+
+.login-nav-btn{
+    border:1px solid #666;
+    padding:9px 17px;
+    border-radius:30px;
+    margin-left:25px;
+    background:#fff;
+    color:#000 !important;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.login-nav-btn:hover{
+    background:#ddd;
 }
 
 /* ================= HERO ================= */
@@ -464,6 +485,157 @@ footer{
     color:#666;
 }
 
+/* ================= LOGIN MODAL ================= */
+
+.login-overlay{
+    position:fixed;
+    inset:0;
+    z-index:5000;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+
+    background:rgba(0,0,0,.82);
+    backdrop-filter:blur(12px);
+}
+
+.login-overlay.active{
+    display:flex;
+}
+
+.login-box{
+    width:100%;
+    max-width:420px;
+    padding:35px 28px;
+    background:#101010;
+    border:1px solid #333;
+    border-radius:25px;
+    box-shadow:0 25px 80px rgba(0,0,0,.7);
+    position:relative;
+}
+
+.login-close{
+    position:absolute;
+    right:18px;
+    top:15px;
+    width:35px;
+    height:35px;
+    border:1px solid #333;
+    border-radius:50%;
+    background:#181818;
+    color:#fff;
+    font-size:20px;
+    cursor:pointer;
+}
+
+.login-logo{
+    text-align:center;
+    font-size:28px;
+    font-weight:900;
+    letter-spacing:3px;
+    margin-bottom:8px;
+}
+
+.login-subtitle{
+    text-align:center;
+    color:#888;
+    font-size:14px;
+    margin-bottom:28px;
+}
+
+.login-box h2{
+    text-align:center;
+    font-size:25px;
+    margin-bottom:22px;
+}
+
+.login-input{
+    width:100%;
+    padding:15px;
+    margin-bottom:14px;
+    background:#080808;
+    border:1px solid #333;
+    border-radius:12px;
+    outline:none;
+    color:#fff;
+    font-size:15px;
+}
+
+.login-input:focus{
+    border-color:#777;
+}
+
+.auth-btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:#fff;
+    color:#000;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.auth-btn:hover{
+    background:#ddd;
+}
+
+.auth-switch{
+    text-align:center;
+    margin-top:20px;
+    color:#888;
+    font-size:14px;
+}
+
+.auth-switch span{
+    color:#fff;
+    text-decoration:underline;
+    cursor:pointer;
+}
+
+.auth-message{
+    min-height:20px;
+    margin-top:14px;
+    text-align:center;
+    font-size:13px;
+    color:#aaa;
+}
+
+.user-panel{
+    display:none;
+    text-align:center;
+}
+
+.user-panel.active{
+    display:block;
+}
+
+.user-email{
+    color:#ccc;
+    font-size:14px;
+    margin:15px 0 22px;
+    word-break:break-all;
+}
+
+.logout-btn{
+    width:100%;
+    padding:14px;
+    border:1px solid #555;
+    border-radius:12px;
+    background:#111;
+    color:#fff;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.logout-btn:hover{
+    background:#fff;
+    color:#000;
+}
+
 /* ================= MOBILE ================= */
 
 @media(max-width:700px){
@@ -478,6 +650,13 @@ footer{
 
     nav .links{
         display:none;
+    }
+
+    nav .login-nav-btn{
+        display:block;
+        margin-left:10px;
+        padding:8px 13px;
+        font-size:12px;
     }
 
     section{
@@ -505,6 +684,10 @@ footer{
         max-width:300px;
     }
 
+    .login-box{
+        padding:30px 20px;
+    }
+
 }
 
 </style>
@@ -529,6 +712,13 @@ footer{
         <a href="#capcut">CAPCUT PRO</a>
         <a href="#about">ABOUT</a>
         <a href="#contact">CONTACT</a>
+
+        <a
+            href="javascript:void(0)"
+            class="login-nav-btn"
+            id="loginNavBtn">
+            LOGIN
+        </a>
 
     </div>
 
@@ -682,7 +872,6 @@ footer{
 
     <div class="portfolio">
 
-
         <div class="project">
 
             <video controls playsinline preload="metadata">
@@ -755,7 +944,6 @@ footer{
 
     <div class="capcut-container">
 
-
         <div class="capcut-badge">
             PROFESSIONAL VIDEO EDITING
         </div>
@@ -777,8 +965,6 @@ footer{
 
         </p>
 
-
-        <!-- CAPCUT FEATURES -->
 
         <div class="capcut-features">
 
@@ -997,7 +1183,6 @@ footer{
 
     <div class="pricing">
 
-
         <div class="price">
 
             <h3>
@@ -1009,12 +1194,10 @@ footer{
             </div>
 
             <p>
-
                 1 Reel<br>
                 Basic Effects<br>
                 Beat Sync<br>
                 Captions
-
             </p>
 
         </div>
@@ -1031,12 +1214,10 @@ footer{
             </div>
 
             <p>
-
                 3 Reels<br>
                 Advanced Effects<br>
                 Motion Graphics<br>
                 Color Enhancement
-
             </p>
 
         </div>
@@ -1053,12 +1234,10 @@ footer{
             </div>
 
             <p>
-
                 5 Reels<br>
                 Advanced Editing<br>
                 Cinematic Effects<br>
                 Priority Delivery
-
             </p>
 
         </div>
@@ -1080,14 +1259,10 @@ footer{
 
 
     <p>
-
         Have a video project?
         Let's turn your idea into something powerful.
-
     </p>
 
-
-    <!-- WHATSAPP -->
 
     <a
         class="btn"
@@ -1099,8 +1274,6 @@ footer{
 
     </a>
 
-
-    <!-- INSTAGRAM -->
 
     <a
         class="btn"
@@ -1134,7 +1307,553 @@ footer{
 </footer>
 
 
+<!-- ================= LOGIN MODAL ================= -->
+
+<div
+    class="login-overlay"
+    id="loginOverlay">
+
+    <div class="login-box">
+
+        <button
+            class="login-close"
+            id="loginClose">
+            ×
+        </button>
+
+
+        <!-- LOGIN FORM -->
+
+        <div id="loginForm">
+
+            <div class="login-logo">
+                EDITORS
+            </div>
+
+            <div class="login-subtitle">
+                Account Access
+            </div>
+
+            <h2>
+                Login
+            </h2>
+
+
+            <input
+                type="email"
+                id="loginEmail"
+                class="login-input"
+                placeholder="Email Address"
+                autocomplete="email">
+
+
+            <input
+                type="password"
+                id="loginPassword"
+                class="login-input"
+                placeholder="Password"
+                autocomplete="current-password">
+
+
+            <button
+                class="auth-btn"
+                id="loginBtn">
+
+                LOGIN
+
+            </button>
+
+
+            <div
+                class="auth-message"
+                id="loginMessage">
+            </div>
+
+
+            <div class="auth-switch">
+
+                Don't have an account?
+
+                <span id="showSignup">
+                    Create Account
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- SIGNUP FORM -->
+
+        <div id="signupForm" style="display:none;">
+
+            <div class="login-logo">
+                EDITORS
+            </div>
+
+            <div class="login-subtitle">
+                Create Your Account
+            </div>
+
+            <h2>
+                Sign Up
+            </h2>
+
+
+            <input
+                type="email"
+                id="signupEmail"
+                class="login-input"
+                placeholder="Email Address"
+                autocomplete="email">
+
+
+            <input
+                type="password"
+                id="signupPassword"
+                class="login-input"
+                placeholder="Password"
+                autocomplete="new-password">
+
+
+            <button
+                class="auth-btn"
+                id="signupBtn">
+
+                CREATE ACCOUNT
+
+            </button>
+
+
+            <div
+                class="auth-message"
+                id="signupMessage">
+            </div>
+
+
+            <div class="auth-switch">
+
+                Already have an account?
+
+                <span id="showLogin">
+                    Login
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- USER PANEL -->
+
+        <div
+            class="user-panel"
+            id="userPanel">
+
+            <div class="login-logo">
+                EDITORS
+            </div>
+
+            <div class="login-subtitle">
+                You're logged in
+            </div>
+
+            <h2>
+                Welcome 👋
+            </h2>
+
+            <div
+                class="user-email"
+                id="userEmail">
+            </div>
+
+
+            <button
+                class="logout-btn"
+                id="logoutBtn">
+
+                LOGOUT
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= FIREBASE ================= -->
+
+<script type="module">
+
+import { initializeApp }
+from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
+
+import {
+    getAuth,
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    signOut,
+    onAuthStateChanged
+}
+from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
+
+
+/* ================= FIREBASE CONFIG ================= */
+
+const firebaseConfig = {
+
+    apiKey:
+    "AIzaSyDuW4ps0og1kHwaY0aIX08UkPxsqmmUh5A",
+
+    authDomain:
+    "login-setup-b5550.firebaseapp.com",
+
+    projectId:
+    "login-setup-b5550",
+
+    storageBucket:
+    "login-setup-b5550.firebasestorage.app",
+
+    messagingSenderId:
+    "319873312737",
+
+    appId:
+    "1:319873312737:web:d15a14dd8e4197b40314a0",
+
+    measurementId:
+    "G-DM11B69TP7"
+
+};
+
+
+/* ================= INITIALIZE ================= */
+
+const app = initializeApp(firebaseConfig);
+
+const auth = getAuth(app);
+
+
+/* ================= ELEMENTS ================= */
+
+const loginOverlay =
+    document.getElementById("loginOverlay");
+
+const loginNavBtn =
+    document.getElementById("loginNavBtn");
+
+const loginClose =
+    document.getElementById("loginClose");
+
+const loginForm =
+    document.getElementById("loginForm");
+
+const signupForm =
+    document.getElementById("signupForm");
+
+const userPanel =
+    document.getElementById("userPanel");
+
+const loginEmail =
+    document.getElementById("loginEmail");
+
+const loginPassword =
+    document.getElementById("loginPassword");
+
+const signupEmail =
+    document.getElementById("signupEmail");
+
+const signupPassword =
+    document.getElementById("signupPassword");
+
+const loginBtn =
+    document.getElementById("loginBtn");
+
+const signupBtn =
+    document.getElementById("signupBtn");
+
+const logoutBtn =
+    document.getElementById("logoutBtn");
+
+const loginMessage =
+    document.getElementById("loginMessage");
+
+const signupMessage =
+    document.getElementById("signupMessage");
+
+const userEmail =
+    document.getElementById("userEmail");
+
+const showSignup =
+    document.getElementById("showSignup");
+
+const showLogin =
+    document.getElementById("showLogin");
+
+
+/* ================= OPEN LOGIN ================= */
+
+loginNavBtn.addEventListener("click", () => {
+
+    loginOverlay.classList.add("active");
+
+});
+
+
+/* ================= CLOSE LOGIN ================= */
+
+loginClose.addEventListener("click", () => {
+
+    loginOverlay.classList.remove("active");
+
+});
+
+
+/* ================= CLICK OUTSIDE ================= */
+
+loginOverlay.addEventListener("click", (event) => {
+
+    if(event.target === loginOverlay){
+
+        loginOverlay.classList.remove("active");
+
+    }
+
+});
+
+
+/* ================= SHOW SIGNUP ================= */
+
+showSignup.addEventListener("click", () => {
+
+    loginForm.style.display = "none";
+    signupForm.style.display = "block";
+
+    loginMessage.textContent = "";
+    signupMessage.textContent = "";
+
+});
+
+
+/* ================= SHOW LOGIN ================= */
+
+showLogin.addEventListener("click", () => {
+
+    signupForm.style.display = "none";
+    loginForm.style.display = "block";
+
+    loginMessage.textContent = "";
+    signupMessage.textContent = "";
+
+});
+
+
+/* ================= CREATE ACCOUNT ================= */
+
+signupBtn.addEventListener("click", async () => {
+
+    const email =
+        signupEmail.value.trim();
+
+    const password =
+        signupPassword.value;
+
+
+    if(!email || !password){
+
+        signupMessage.textContent =
+        "Please enter email and password.";
+
+        return;
+
+    }
+
+
+    if(password.length < 6){
+
+        signupMessage.textContent =
+        "Password must be at least 6 characters.";
+
+        return;
+
+    }
+
+
+    signupBtn.disabled = true;
+    signupBtn.textContent = "CREATING...";
+
+
+    try{
+
+        await createUserWithEmailAndPassword(
+            auth,
+            email,
+            password
+        );
+
+        signupMessage.textContent =
+        "Account created successfully!";
+
+        signupEmail.value = "";
+        signupPassword.value = "";
+
+
+    }catch(error){
+
+        signupMessage.textContent =
+        getFirebaseError(error);
+
+    }
+
+
+    signupBtn.disabled = false;
+    signupBtn.textContent = "CREATE ACCOUNT";
+
+});
+
+
+/* ================= LOGIN ================= */
+
+loginBtn.addEventListener("click", async () => {
+
+    const email =
+        loginEmail.value.trim();
+
+    const password =
+        loginPassword.value;
+
+
+    if(!email || !password){
+
+        loginMessage.textContent =
+        "Please enter email and password.";
+
+        return;
+
+    }
+
+
+    loginBtn.disabled = true;
+    loginBtn.textContent = "LOGGING IN...";
+
+
+    try{
+
+        await signInWithEmailAndPassword(
+            auth,
+            email,
+            password
+        );
+
+        loginMessage.textContent =
+        "Login successful!";
+
+
+        loginEmail.value = "";
+        loginPassword.value = "";
+
+
+    }catch(error){
+
+        loginMessage.textContent =
+        getFirebaseError(error);
+
+    }
+
+
+    loginBtn.disabled = false;
+    loginBtn.textContent = "LOGIN";
+
+});
+
+
+/* ================= LOGOUT ================= */
+
+logoutBtn.addEventListener("click", async () => {
+
+    try{
+
+        await signOut(auth);
+
+        loginOverlay.classList.remove("active");
+
+    }catch(error){
+
+        console.error(error);
+
+    }
+
+});
+
+
+/* ================= AUTH STATE ================= */
+
+onAuthStateChanged(auth, (user) => {
+
+    if(user){
+
+        loginNavBtn.textContent =
+        "ACCOUNT";
+
+        loginForm.style.display = "none";
+        signupForm.style.display = "none";
+        userPanel.classList.add("active");
+
+        userEmail.textContent =
+        user.email || "Logged-in user";
+
+    }else{
+
+        loginNavBtn.textContent =
+        "LOGIN";
+
+        loginForm.style.display = "block";
+        signupForm.style.display = "none";
+        userPanel.classList.remove("active");
+
+    }
+
+});
+
+
+/* ================= FIREBASE ERROR ================= */
+
+function getFirebaseError(error){
+
+    switch(error.code){
+
+        case "auth/email-already-in-use":
+            return "This email is already registered.";
+
+        case "auth/invalid-email":
+            return "Please enter a valid email.";
+
+        case "auth/weak-password":
+            return "Password is too weak.";
+
+        case "auth/invalid-credential":
+            return "Invalid email or password.";
+
+        case "auth/user-not-found":
+            return "Account not found.";
+
+        case "auth/wrong-password":
+            return "Incorrect password.";
+
+        case "auth/too-many-requests":
+            return "Too many attempts. Try again later.";
+
+        default:
+            return error.message || "Something went wrong.";
+
+    }
+
+}
+
+</script>
+
+
 </body>
 
 </html>
-```
