@@ -72,8 +72,6 @@ nav a:hover{
     color:#aaa;
 }
 
-/* LOGIN NAV BUTTON */
-
 .login-nav-btn{
     border:1px solid #666;
     padding:9px 17px;
@@ -495,7 +493,6 @@ footer{
     align-items:center;
     justify-content:center;
     padding:20px;
-
     background:rgba(0,0,0,.82);
     backdrop-filter:blur(12px);
 }
@@ -636,6 +633,152 @@ footer{
     color:#000;
 }
 
+/* ================= DASHBOARD ================= */
+
+.dashboard-section{
+    display:none;
+    background:#090909;
+    border-top:1px solid #222;
+}
+
+.dashboard-section.active{
+    display:block;
+}
+
+.dashboard-box{
+    max-width:1100px;
+    margin:auto;
+}
+
+.dashboard-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.dashboard-card{
+    background:#101010;
+    border:1px solid #292929;
+    border-radius:20px;
+    padding:28px;
+}
+
+.dashboard-card h3{
+    font-size:23px;
+    margin-bottom:20px;
+}
+
+.requirement-input,
+.requirement-select{
+    width:100%;
+    padding:14px;
+    margin-bottom:13px;
+    background:#080808;
+    color:#fff;
+    border:1px solid #333;
+    border-radius:10px;
+    outline:none;
+}
+
+.requirement-input:focus,
+.requirement-select:focus{
+    border-color:#777;
+}
+
+textarea.requirement-input{
+    min-height:130px;
+    resize:vertical;
+}
+
+.requirement-btn{
+    width:100%;
+    padding:14px;
+    border:0;
+    border-radius:10px;
+    background:#fff;
+    color:#000;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.requirement-btn:hover{
+    background:#ddd;
+}
+
+.request-item{
+    background:#080808;
+    border:1px solid #292929;
+    border-radius:15px;
+    padding:18px;
+    margin-bottom:15px;
+}
+
+.request-item h4{
+    margin-bottom:10px;
+}
+
+.request-item p{
+    color:#aaa;
+    font-size:14px;
+    line-height:1.6;
+    margin:5px 0;
+}
+
+.status{
+    display:inline-block;
+    margin-top:10px;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+    background:#222;
+}
+
+.status.pending{
+    color:#ffd166;
+}
+
+.status.accepted{
+    color:#7cff9b;
+}
+
+.status.rejected{
+    color:#ff7777;
+}
+
+.admin-actions{
+    display:flex;
+    gap:10px;
+    margin-top:15px;
+}
+
+.accept-btn,
+.reject-btn{
+    flex:1;
+    padding:10px;
+    border-radius:9px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.accept-btn{
+    background:#fff;
+    color:#000;
+    border:0;
+}
+
+.reject-btn{
+    background:#111;
+    color:#fff;
+    border:1px solid #555;
+}
+
+.empty-message{
+    color:#777;
+    text-align:center;
+    padding:20px;
+}
+
 /* ================= MOBILE ================= */
 
 @media(max-width:700px){
@@ -688,6 +831,10 @@ footer{
         padding:30px 20px;
     }
 
+    .dashboard-grid{
+        grid-template-columns:1fr;
+    }
+
 }
 
 </style>
@@ -712,6 +859,13 @@ footer{
         <a href="#capcut">CAPCUT PRO</a>
         <a href="#about">ABOUT</a>
         <a href="#contact">CONTACT</a>
+
+        <a
+            href="#dashboard"
+            id="dashboardNavBtn"
+            style="display:none;">
+            DASHBOARD
+        </a>
 
         <a
             href="javascript:void(0)"
@@ -873,62 +1027,34 @@ footer{
     <div class="portfolio">
 
         <div class="project">
-
             <video controls playsinline preload="metadata">
-
-                <source
-                    src="video1.mp4"
-                    type="video/mp4">
-
+                <source src="video1.mp4" type="video/mp4">
                 Your browser does not support the video tag.
-
             </video>
-
         </div>
 
 
         <div class="project">
-
             <video controls playsinline preload="metadata">
-
-                <source
-                    src="video2.mp4"
-                    type="video/mp4">
-
+                <source src="video2.mp4" type="video/mp4">
                 Your browser does not support the video tag.
-
             </video>
-
         </div>
 
 
         <div class="project">
-
             <video controls playsinline preload="metadata">
-
-                <source
-                    src="video3.mp4"
-                    type="video/mp4">
-
+                <source src="video3.mp4" type="video/mp4">
                 Your browser does not support the video tag.
-
             </video>
-
         </div>
 
 
         <div class="project">
-
             <video controls playsinline preload="metadata">
-
-                <source
-                    src="video4.mp4"
-                    type="video/mp4">
-
+                <source src="video4.mp4" type="video/mp4">
                 Your browser does not support the video tag.
-
             </video>
-
         </div>
 
     </div>
@@ -938,9 +1064,7 @@ footer{
 
 <!-- ================= CAPCUT PRO ================= -->
 
-<section
-    class="capcut-section"
-    id="capcut">
+<section class="capcut-section" id="capcut">
 
     <div class="capcut-container">
 
@@ -948,11 +1072,9 @@ footer{
             PROFESSIONAL VIDEO EDITING
         </div>
 
-
         <h2 class="capcut-title">
             CAPCUT <span>PRO</span>
         </h2>
-
 
         <p class="capcut-description">
 
@@ -967,7 +1089,6 @@ footer{
 
 
         <div class="capcut-features">
-
 
             <div class="capcut-card">
 
@@ -1079,8 +1200,6 @@ footer{
         </div>
 
 
-        <!-- ================= DOWNLOAD ================= -->
-
         <div class="capcut-download">
 
             <h3>
@@ -1090,7 +1209,6 @@ footer{
             <p>
                 Download CapCut using the link provided below.
             </p>
-
 
             <div class="download-points">
 
@@ -1103,7 +1221,6 @@ footer{
                 </div>
 
             </div>
-
 
             <a
                 href="YAHAN_APNA_DOWNLOAD_LINK_DALO"
@@ -1247,6 +1364,166 @@ footer{
 </section>
 
 
+<!-- ================= CLIENT DASHBOARD ================= -->
+
+<section
+    class="dashboard-section"
+    id="dashboard">
+
+    <div class="title">
+
+        <h2>
+            Client Dashboard
+        </h2>
+
+        <p>
+            Submit your video editing project requirement.
+        </p>
+
+    </div>
+
+
+    <div class="dashboard-box">
+
+        <div class="dashboard-grid">
+
+
+            <!-- NEW REQUEST -->
+
+            <div class="dashboard-card">
+
+                <h3>
+                    New Project Request
+                </h3>
+
+
+                <select
+                    id="reqService"
+                    class="requirement-select">
+
+                    <option value="">
+                        Select Service
+                    </option>
+
+                    <option value="Reels Editing">
+                        Reels Editing
+                    </option>
+
+                    <option value="YouTube Editing">
+                        YouTube Editing
+                    </option>
+
+                    <option value="Cinematic Editing">
+                        Cinematic Editing
+                    </option>
+
+                    <option value="Shorts">
+                        Shorts
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+
+                <input
+                    id="reqWhatsapp"
+                    class="requirement-input"
+                    type="tel"
+                    placeholder="WhatsApp Number">
+
+
+                <input
+                    id="reqDeadline"
+                    class="requirement-input"
+                    type="text"
+                    placeholder="Deadline">
+
+
+                <input
+                    id="reqBudget"
+                    class="requirement-input"
+                    type="text"
+                    placeholder="Budget">
+
+
+                <textarea
+                    id="reqDetails"
+                    class="requirement-input"
+                    placeholder="Describe your project requirement..."></textarea>
+
+
+                <button
+                    id="submitRequestBtn"
+                    class="requirement-btn">
+
+                    SUBMIT REQUEST
+
+                </button>
+
+
+                <div
+                    id="requestMessage"
+                    class="auth-message">
+                </div>
+
+            </div>
+
+
+            <!-- MY REQUESTS -->
+
+            <div class="dashboard-card">
+
+                <h3>
+                    My Requests
+                </h3>
+
+
+                <div id="myRequests">
+
+                    <div class="empty-message">
+                        No requests yet.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ADMIN PANEL -->
+
+        <div
+            id="adminPanel"
+            style="display:none;margin-top:30px;">
+
+            <div class="dashboard-card">
+
+                <h3>
+                    👑 Admin Requests
+                </h3>
+
+
+                <div id="adminRequests">
+
+                    <div class="empty-message">
+                        No client requests yet.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
 <!-- ================= CONTACT ================= -->
 
 <section
@@ -1322,7 +1599,7 @@ footer{
         </button>
 
 
-        <!-- LOGIN FORM -->
+        <!-- LOGIN -->
 
         <div id="loginForm">
 
@@ -1383,9 +1660,11 @@ footer{
         </div>
 
 
-        <!-- SIGNUP FORM -->
+        <!-- SIGNUP -->
 
-        <div id="signupForm" style="display:none;">
+        <div
+            id="signupForm"
+            style="display:none;">
 
             <div class="login-logo">
                 EDITORS
@@ -1462,6 +1741,7 @@ footer{
                 Welcome 👋
             </h2>
 
+
             <div
                 class="user-email"
                 id="userEmail">
@@ -1490,6 +1770,7 @@ footer{
 import { initializeApp }
 from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
 
+
 import {
     getAuth,
     createUserWithEmailAndPassword,
@@ -1498,6 +1779,20 @@ import {
     onAuthStateChanged
 }
 from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
+
+
+import {
+    getFirestore,
+    collection,
+    addDoc,
+    query,
+    where,
+    onSnapshot,
+    updateDoc,
+    doc,
+    serverTimestamp
+}
+from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
 
 
 /* ================= FIREBASE CONFIG ================= */
@@ -1530,9 +1825,20 @@ const firebaseConfig = {
 
 /* ================= INITIALIZE ================= */
 
-const app = initializeApp(firebaseConfig);
+const app =
+    initializeApp(firebaseConfig);
 
-const auth = getAuth(app);
+const auth =
+    getAuth(app);
+
+const db =
+    getFirestore(app);
+
+
+/* ================= ADMIN ================= */
+
+const ADMIN_EMAIL =
+    "perashantdiwakar243122@gmail.com";
 
 
 /* ================= ELEMENTS ================= */
@@ -1591,8 +1897,29 @@ const showSignup =
 const showLogin =
     document.getElementById("showLogin");
 
+const dashboardNavBtn =
+    document.getElementById("dashboardNavBtn");
 
-/* ================= OPEN LOGIN ================= */
+const dashboardSection =
+    document.getElementById("dashboard");
+
+const adminPanel =
+    document.getElementById("adminPanel");
+
+const submitRequestBtn =
+    document.getElementById("submitRequestBtn");
+
+const requestMessage =
+    document.getElementById("requestMessage");
+
+const myRequests =
+    document.getElementById("myRequests");
+
+const adminRequests =
+    document.getElementById("adminRequests");
+
+
+/* ================= LOGIN OPEN ================= */
 
 loginNavBtn.addEventListener("click", () => {
 
@@ -1601,7 +1928,7 @@ loginNavBtn.addEventListener("click", () => {
 });
 
 
-/* ================= CLOSE LOGIN ================= */
+/* ================= LOGIN CLOSE ================= */
 
 loginClose.addEventListener("click", () => {
 
@@ -1609,8 +1936,6 @@ loginClose.addEventListener("click", () => {
 
 });
 
-
-/* ================= CLICK OUTSIDE ================= */
 
 loginOverlay.addEventListener("click", (event) => {
 
@@ -1623,27 +1948,35 @@ loginOverlay.addEventListener("click", (event) => {
 });
 
 
-/* ================= SHOW SIGNUP ================= */
+/* ================= SIGNUP SCREEN ================= */
 
 showSignup.addEventListener("click", () => {
 
     loginForm.style.display = "none";
+
     signupForm.style.display = "block";
 
+    userPanel.classList.remove("active");
+
     loginMessage.textContent = "";
+
     signupMessage.textContent = "";
 
 });
 
 
-/* ================= SHOW LOGIN ================= */
+/* ================= LOGIN SCREEN ================= */
 
 showLogin.addEventListener("click", () => {
 
     signupForm.style.display = "none";
+
     loginForm.style.display = "block";
 
+    userPanel.classList.remove("active");
+
     loginMessage.textContent = "";
+
     signupMessage.textContent = "";
 
 });
@@ -1681,7 +2014,9 @@ signupBtn.addEventListener("click", async () => {
 
 
     signupBtn.disabled = true;
-    signupBtn.textContent = "CREATING...";
+
+    signupBtn.textContent =
+        "CREATING...";
 
 
     try{
@@ -1692,10 +2027,13 @@ signupBtn.addEventListener("click", async () => {
             password
         );
 
+
         signupMessage.textContent =
         "Account created successfully!";
 
+
         signupEmail.value = "";
+
         signupPassword.value = "";
 
 
@@ -1708,7 +2046,9 @@ signupBtn.addEventListener("click", async () => {
 
 
     signupBtn.disabled = false;
-    signupBtn.textContent = "CREATE ACCOUNT";
+
+    signupBtn.textContent =
+        "CREATE ACCOUNT";
 
 });
 
@@ -1735,7 +2075,9 @@ loginBtn.addEventListener("click", async () => {
 
 
     loginBtn.disabled = true;
-    loginBtn.textContent = "LOGGING IN...";
+
+    loginBtn.textContent =
+        "LOGGING IN...";
 
 
     try{
@@ -1746,11 +2088,13 @@ loginBtn.addEventListener("click", async () => {
             password
         );
 
+
         loginMessage.textContent =
         "Login successful!";
 
 
         loginEmail.value = "";
+
         loginPassword.value = "";
 
 
@@ -1763,7 +2107,9 @@ loginBtn.addEventListener("click", async () => {
 
 
     loginBtn.disabled = false;
-    loginBtn.textContent = "LOGIN";
+
+    loginBtn.textContent =
+        "LOGIN";
 
 });
 
@@ -1787,37 +2133,594 @@ logoutBtn.addEventListener("click", async () => {
 });
 
 
-/* ================= AUTH STATE ================= */
+/* ================= SUBMIT REQUEST ================= */
 
-onAuthStateChanged(auth, (user) => {
+submitRequestBtn.addEventListener("click", async () => {
 
-    if(user){
+    const user =
+        auth.currentUser;
 
-        loginNavBtn.textContent =
-        "ACCOUNT";
 
-        loginForm.style.display = "none";
-        signupForm.style.display = "none";
-        userPanel.classList.add("active");
+    if(!user){
 
-        userEmail.textContent =
-        user.email || "Logged-in user";
+        requestMessage.textContent =
+        "Please login first.";
 
-    }else{
-
-        loginNavBtn.textContent =
-        "LOGIN";
-
-        loginForm.style.display = "block";
-        signupForm.style.display = "none";
-        userPanel.classList.remove("active");
+        return;
 
     }
+
+
+    const service =
+        document.getElementById("reqService").value;
+
+    const whatsapp =
+        document.getElementById("reqWhatsapp")
+        .value.trim();
+
+    const deadline =
+        document.getElementById("reqDeadline")
+        .value.trim();
+
+    const budget =
+        document.getElementById("reqBudget")
+        .value.trim();
+
+    const details =
+        document.getElementById("reqDetails")
+        .value.trim();
+
+
+    if(!service || !whatsapp || !details){
+
+        requestMessage.textContent =
+        "Please fill Service, WhatsApp and Requirement.";
+
+        return;
+
+    }
+
+
+    submitRequestBtn.disabled = true;
+
+    submitRequestBtn.textContent =
+        "SUBMITTING...";
+
+
+    try{
+
+        await addDoc(
+            collection(db, "requests"),
+            {
+
+                uid: user.uid,
+
+                email: user.email,
+
+                whatsapp: whatsapp,
+
+                service: service,
+
+                deadline: deadline,
+
+                budget: budget,
+
+                requirement: details,
+
+                status: "pending",
+
+                createdAt: serverTimestamp()
+
+            }
+        );
+
+
+        requestMessage.textContent =
+        "Request submitted successfully!";
+
+
+        document.getElementById("reqService").value = "";
+
+        document.getElementById("reqWhatsapp").value = "";
+
+        document.getElementById("reqDeadline").value = "";
+
+        document.getElementById("reqBudget").value = "";
+
+        document.getElementById("reqDetails").value = "";
+
+
+    }catch(error){
+
+        console.error(error);
+
+        requestMessage.textContent =
+        "Request submit failed: " +
+        error.message;
+
+    }
+
+
+    submitRequestBtn.disabled = false;
+
+    submitRequestBtn.textContent =
+        "SUBMIT REQUEST";
 
 });
 
 
-/* ================= FIREBASE ERROR ================= */
+/* ================= CLIENT REQUESTS ================= */
+
+let clientUnsubscribe = null;
+
+let adminUnsubscribe = null;
+
+
+function loadClientRequests(user){
+
+    if(clientUnsubscribe){
+
+        clientUnsubscribe();
+
+    }
+
+
+    const q =
+    query(
+        collection(db, "requests"),
+        where("uid", "==", user.uid)
+    );
+
+
+    clientUnsubscribe =
+    onSnapshot(q, (snapshot) => {
+
+        if(snapshot.empty){
+
+            myRequests.innerHTML =
+            `<div class="empty-message">
+                No requests yet.
+            </div>`;
+
+            return;
+
+        }
+
+
+        myRequests.innerHTML = "";
+
+
+        snapshot.forEach((requestDoc) => {
+
+            const data =
+                requestDoc.data();
+
+
+            const item =
+                document.createElement("div");
+
+
+            item.className =
+                "request-item";
+
+
+            item.innerHTML = `
+
+                <h4>
+                    ${escapeHTML(
+                        data.service || "Project"
+                    )}
+                </h4>
+
+                <p>
+                    <strong>Requirement:</strong>
+                    ${escapeHTML(
+                        data.requirement || ""
+                    )}
+                </p>
+
+                <p>
+                    <strong>Deadline:</strong>
+                    ${escapeHTML(
+                        data.deadline ||
+                        "Not specified"
+                    )}
+                </p>
+
+                <p>
+                    <strong>Budget:</strong>
+                    ${escapeHTML(
+                        data.budget ||
+                        "Not specified"
+                    )}
+                </p>
+
+                <span class="status ${
+                    data.status || "pending"
+                }">
+
+                    ${(
+                        data.status ||
+                        "pending"
+                    ).toUpperCase()}
+
+                </span>
+
+            `;
+
+
+            myRequests.appendChild(item);
+
+        });
+
+    });
+
+}
+
+
+/* ================= ADMIN REQUESTS ================= */
+
+function loadAdminRequests(){
+
+    if(adminUnsubscribe){
+
+        adminUnsubscribe();
+
+    }
+
+
+    const q =
+        collection(db, "requests");
+
+
+    adminUnsubscribe =
+    onSnapshot(q, (snapshot) => {
+
+        if(snapshot.empty){
+
+            adminRequests.innerHTML =
+            `<div class="empty-message">
+                No client requests yet.
+            </div>`;
+
+            return;
+
+        }
+
+
+        adminRequests.innerHTML = "";
+
+
+        snapshot.forEach((requestDoc) => {
+
+            const data =
+                requestDoc.data();
+
+
+            const item =
+                document.createElement("div");
+
+
+            item.className =
+                "request-item";
+
+
+            let actions = "";
+
+
+            if(data.status === "pending"){
+
+                actions = `
+
+                    <div class="admin-actions">
+
+                        <button
+                            class="accept-btn"
+                            data-id="${requestDoc.id}"
+                            data-status="accepted">
+
+                            ✓ ACCEPT
+
+                        </button>
+
+                        <button
+                            class="reject-btn"
+                            data-id="${requestDoc.id}"
+                            data-status="rejected">
+
+                            ✕ REJECT
+
+                        </button>
+
+                    </div>
+
+                `;
+
+            }
+
+
+            item.innerHTML = `
+
+                <h4>
+                    ${escapeHTML(
+                        data.service ||
+                        "Project"
+                    )}
+                </h4>
+
+                <p>
+                    <strong>Client:</strong>
+                    ${escapeHTML(
+                        data.email || ""
+                    )}
+                </p>
+
+                <p>
+                    <strong>WhatsApp:</strong>
+                    ${escapeHTML(
+                        data.whatsapp || ""
+                    )}
+                </p>
+
+                <p>
+                    <strong>Requirement:</strong>
+                    ${escapeHTML(
+                        data.requirement || ""
+                    )}
+                </p>
+
+                <p>
+                    <strong>Deadline:</strong>
+                    ${escapeHTML(
+                        data.deadline ||
+                        "Not specified"
+                    )}
+                </p>
+
+                <p>
+                    <strong>Budget:</strong>
+                    ${escapeHTML(
+                        data.budget ||
+                        "Not specified"
+                    )}
+                </p>
+
+                <span class="status ${
+                    data.status || "pending"
+                }">
+
+                    ${(
+                        data.status ||
+                        "pending"
+                    ).toUpperCase()}
+
+                </span>
+
+                ${actions}
+
+            `;
+
+
+            adminRequests.appendChild(item);
+
+        });
+
+
+        document
+        .querySelectorAll(
+            ".accept-btn, .reject-btn"
+        )
+        .forEach((button) => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    updateRequestStatus(
+                        button.dataset.id,
+                        button.dataset.status
+                    );
+
+                }
+            );
+
+        });
+
+    });
+
+}
+
+
+/* ================= UPDATE REQUEST ================= */
+
+async function updateRequestStatus(
+    requestId,
+    status
+){
+
+    const user =
+        auth.currentUser;
+
+
+    if(
+        !user ||
+        user.email?.toLowerCase()
+        !== ADMIN_EMAIL
+    ){
+
+        alert(
+            "Admin access required."
+        );
+
+        return;
+
+    }
+
+
+    try{
+
+        await updateDoc(
+            doc(
+                db,
+                "requests",
+                requestId
+            ),
+            {
+                status: status
+            }
+        );
+
+
+        if(status === "accepted"){
+
+            alert(
+                "Request accepted successfully!"
+            );
+
+        }else{
+
+            alert(
+                "Request rejected."
+            );
+
+        }
+
+    }catch(error){
+
+        console.error(error);
+
+        alert(
+            "Could not update request: " +
+            error.message
+        );
+
+    }
+
+}
+
+
+/* ================= AUTH STATE ================= */
+
+onAuthStateChanged(
+    auth,
+    (user) => {
+
+        if(user){
+
+            loginNavBtn.textContent =
+                "ACCOUNT";
+
+
+            dashboardNavBtn.style.display =
+                "inline-block";
+
+
+            dashboardSection.classList.add(
+                "active"
+            );
+
+
+            loginForm.style.display =
+                "none";
+
+            signupForm.style.display =
+                "none";
+
+            userPanel.classList.add(
+                "active"
+            );
+
+
+            userEmail.textContent =
+                user.email ||
+                "Logged-in user";
+
+
+            loadClientRequests(user);
+
+
+            if(
+                user.email?.toLowerCase()
+                === ADMIN_EMAIL
+            ){
+
+                adminPanel.style.display =
+                    "block";
+
+                loadAdminRequests();
+
+            }else{
+
+                adminPanel.style.display =
+                    "none";
+
+                if(adminUnsubscribe){
+
+                    adminUnsubscribe();
+
+                    adminUnsubscribe =
+                        null;
+
+                }
+
+            }
+
+        }else{
+
+            loginNavBtn.textContent =
+                "LOGIN";
+
+
+            dashboardNavBtn.style.display =
+                "none";
+
+
+            dashboardSection.classList.remove(
+                "active"
+            );
+
+
+            adminPanel.style.display =
+                "none";
+
+
+            loginForm.style.display =
+                "block";
+
+            signupForm.style.display =
+                "none";
+
+            userPanel.classList.remove(
+                "active"
+            );
+
+
+            if(clientUnsubscribe){
+
+                clientUnsubscribe();
+
+                clientUnsubscribe =
+                    null;
+
+            }
+
+
+            if(adminUnsubscribe){
+
+                adminUnsubscribe();
+
+                adminUnsubscribe =
+                    null;
+
+            }
+
+        }
+
+    }
+);
+
+
+/* ================= ERROR HANDLER ================= */
 
 function getFirebaseError(error){
 
@@ -1830,7 +2733,7 @@ function getFirebaseError(error){
             return "Please enter a valid email.";
 
         case "auth/weak-password":
-            return "Password is too weak.";
+            return "Password must be at least 6 characters.";
 
         case "auth/invalid-credential":
             return "Invalid email or password.";
@@ -1845,14 +2748,33 @@ function getFirebaseError(error){
             return "Too many attempts. Try again later.";
 
         default:
-            return error.message || "Something went wrong.";
+            return error.message ||
+                "Something went wrong.";
 
     }
 
 }
 
-</script>
 
+/* ================= HTML SECURITY ================= */
+
+function escapeHTML(value){
+
+    return String(value)
+
+        .replaceAll("&", "&amp;")
+
+        .replaceAll("<", "&lt;")
+
+        .replaceAll(">", "&gt;")
+
+        .replaceAll('"', "&quot;")
+
+        .replaceAll("'", "&#039;");
+
+}
+
+</script>
 
 </body>
 
