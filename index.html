@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +21,6 @@ content="EDITORS by PRASHANT DIWAKAR - Professional Video Editing Studio">
     --card2:#111;
     --white:#fff;
     --gray:#999;
-    --darkgray:#555;
     --border:#242424;
 }
 
@@ -585,18 +585,6 @@ header{
     line-height:1.7;
 }
 
-.service a{
-    display:inline-block;
-
-    margin-top:22px;
-
-    color:#aaa;
-
-    font-size:9px;
-    font-weight:bold;
-    letter-spacing:1px;
-}
-
 
 /* ================= STRIP ================= */
 
@@ -758,6 +746,109 @@ header{
 
     font-size:16px;
     line-height:1.9;
+}
+
+
+/* ================= PRICING ================= */
+
+.pricing-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.price-card{
+    padding:35px;
+    min-height:320px;
+
+    background:#0d0d0d;
+    border:1px solid #242424;
+
+    transition:.3s;
+}
+
+.price-card:hover{
+    transform:translateY(-6px);
+    border-color:#444;
+}
+
+.price-card h3{
+    margin-top:20px;
+    font-size:20px;
+}
+
+.price{
+    margin-top:25px;
+    font-size:38px;
+    font-weight:900;
+}
+
+.price-card p{
+    margin-top:15px;
+    color:#888;
+    line-height:1.7;
+    font-size:13px;
+}
+
+.price-card .btn{
+    margin-top:25px;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact-box{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+
+    padding:70px;
+
+    border:1px solid #222;
+    background:#090909;
+}
+
+.contact-box h2{
+    margin-top:20px;
+
+    font-size:clamp(45px,6vw,80px);
+
+    line-height:.9;
+    letter-spacing:-5px;
+}
+
+.contact-box h2 span{
+    color:#666;
+}
+
+.contact-info{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.contact-item{
+    padding:25px;
+
+    border:1px solid #222;
+    background:#0d0d0d;
+}
+
+.contact-item span{
+    display:block;
+
+    color:#666;
+
+    font-size:9px;
+    letter-spacing:1.5px;
+}
+
+.contact-item strong{
+    display:block;
+
+    margin-top:8px;
+
+    font-size:15px;
 }
 
 
@@ -923,6 +1014,15 @@ footer{
         padding:40px 25px;
     }
 
+    .pricing-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-box{
+        grid-template-columns:1fr;
+        padding:40px 25px;
+    }
+
     .footer{
         flex-direction:column;
     }
@@ -991,24 +1091,23 @@ footer{
 
 <div class="nav">
 
-<a href="index.html" class="logo">
+<a href="#home" class="logo">
     <span class="logo-box">E</span>
     EDITORS
 </a>
 
 <nav class="links">
 
-<a href="index.html" class="active">HOME</a>
-<a href="services.html">SERVICES</a>
-<a href="portfolio.html">PORTFOLIO</a>
-<a href="capcut.html">CAPCUT PRO</a>
-<a href="about.html">ABOUT</a>
-<a href="pricing.html">PRICING</a>
-<a href="contact.html">CONTACT</a>
+<a href="#home" class="active">HOME</a>
+<a href="#services">SERVICES</a>
+<a href="#portfolio">PORTFOLIO</a>
+<a href="#about">ABOUT</a>
+<a href="#pricing">PRICING</a>
+<a href="#contact">CONTACT</a>
 
 </nav>
 
-<a href="contact.html" class="nav-btn">
+<a href="#contact" class="nav-btn">
     LET'S TALK
 </a>
 
@@ -1017,9 +1116,9 @@ footer{
 </header>
 
 
-<!-- ================= HERO ================= -->
+<!-- ================= HOME ================= -->
 
-<section class="hero">
+<section class="hero" id="home">
 
 <div class="hero-inner">
 
@@ -1044,11 +1143,11 @@ and creative content.
 
 <div class="buttons">
 
-<a href="portfolio.html" class="btn btn-white">
+<a href="#portfolio" class="btn btn-white">
 VIEW OUR WORK ↗
 </a>
 
-<a href="contact.html" class="btn btn-outline">
+<a href="#contact" class="btn btn-outline">
 HIRE ME
 </a>
 
@@ -1120,7 +1219,7 @@ transform ordinary footage into engaging, polished
 and professional content.
 </p>
 
-<a href="services.html" class="text-link">
+<a href="#services" class="text-link">
 EXPLORE SERVICES →
 </a>
 
@@ -1133,7 +1232,7 @@ EXPLORE SERVICES →
 
 <!-- ================= SERVICES ================= -->
 
-<section class="section">
+<section class="section" id="services">
 
 <div class="heading">
 
@@ -1149,10 +1248,6 @@ WHAT WE
 </h2>
 
 </div>
-
-<a href="services.html" class="btn btn-outline">
-ALL SERVICES →
-</a>
 
 </div>
 
@@ -1172,10 +1267,6 @@ Fast cuts, beat sync, captions,
 transitions and engaging effects.
 </p>
 
-<a href="services.html">
-EXPLORE →
-</a>
-
 </div>
 
 
@@ -1191,10 +1282,6 @@ EXPLORE →
 Long-form editing with clean storytelling,
 pacing and professional structure.
 </p>
-
-<a href="services.html">
-EXPLORE →
-</a>
 
 </div>
 
@@ -1212,10 +1299,6 @@ Color, sound design, cinematic transitions
 and visual storytelling.
 </p>
 
-<a href="services.html">
-EXPLORE →
-</a>
-
 </div>
 
 
@@ -1231,10 +1314,6 @@ EXPLORE →
 High-retention vertical videos designed
 for modern social platforms.
 </p>
-
-<a href="services.html">
-EXPLORE →
-</a>
 
 </div>
 
@@ -1272,7 +1351,7 @@ EXPLORE →
 
 <!-- ================= PORTFOLIO ================= -->
 
-<section class="section">
+<section class="section" id="portfolio">
 
 <div class="heading">
 
@@ -1289,16 +1368,12 @@ RECENT
 
 </div>
 
-<a href="portfolio.html" class="btn btn-outline">
-VIEW PORTFOLIO →
-</a>
-
 </div>
 
 
 <div class="portfolio-grid">
 
-<a href="portfolio.html" class="portfolio-card">
+<a href="#contact" class="portfolio-card">
 
 <div class="portfolio-num">01</div>
 
@@ -1313,7 +1388,7 @@ VIEW PORTFOLIO →
 </a>
 
 
-<a href="portfolio.html" class="portfolio-card">
+<a href="#contact" class="portfolio-card">
 
 <div class="portfolio-num">02</div>
 
@@ -1328,7 +1403,7 @@ VIEW PORTFOLIO →
 </a>
 
 
-<a href="portfolio.html" class="portfolio-card">
+<a href="#contact" class="portfolio-card">
 
 <div class="portfolio-num">03</div>
 
@@ -1349,7 +1424,7 @@ VIEW PORTFOLIO →
 
 <!-- ================= ABOUT ================= -->
 
-<section class="section">
+<section class="section" id="about">
 
 <div class="about-box">
 
@@ -1371,9 +1446,147 @@ content that gets attention.
 
 <br>
 
-<a href="about.html" class="btn btn-white">
-MORE ABOUT US ↗
+<a href="#contact" class="btn btn-white">
+START A PROJECT ↗
 </a>
+
+</div>
+
+</section>
+
+
+<!-- ================= PRICING ================= -->
+
+<section class="section" id="pricing">
+
+<div class="heading">
+
+<div>
+
+<div class="label">
+<span>05</span> PRICING
+</div>
+
+<h2>
+SIMPLE
+<span>PLANS.</span>
+</h2>
+
+</div>
+
+</div>
+
+
+<div class="pricing-grid">
+
+<div class="price-card">
+
+<div class="label">01 / BASIC</div>
+
+<h3>SHORT VIDEO</h3>
+
+<div class="price">₹299+</div>
+
+<p>
+Basic cuts, transitions, music sync
+and simple captions.
+</p>
+
+<a href="#contact" class="btn btn-outline">
+GET STARTED →
+</a>
+
+</div>
+
+
+<div class="price-card">
+
+<div class="label">02 / CREATOR</div>
+
+<h3>REELS PACKAGE</h3>
+
+<div class="price">₹799+</div>
+
+<p>
+Professional reels editing with
+captions, effects and beat sync.
+</p>
+
+<a href="#contact" class="btn btn-outline">
+GET STARTED →
+</a>
+
+</div>
+
+
+<div class="price-card">
+
+<div class="label">03 / PRO</div>
+
+<h3>CINEMATIC</h3>
+
+<div class="price">₹1499+</div>
+
+<p>
+Advanced editing, color, sound design
+and cinematic storytelling.
+</p>
+
+<a href="#contact" class="btn btn-outline">
+GET STARTED →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="section" id="contact">
+
+<div class="contact-box">
+
+<div>
+
+<div class="label">
+<span>06</span> CONTACT
+</div>
+
+<h2>
+LET'S
+<span>WORK.</span>
+</h2>
+
+<p style="margin-top:30px;color:#888;line-height:1.8;">
+Have a video project in mind?
+Send your footage and project details.
+Let's create something powerful together.
+</p>
+
+</div>
+
+
+<div class="contact-info">
+
+<div class="contact-item">
+<span>CREATOR</span>
+<strong>PRASHANT DIWAKAR</strong>
+</div>
+
+<div class="contact-item">
+<span>SERVICE</span>
+<strong>VIDEO EDITING</strong>
+</div>
+
+<div class="contact-item">
+<span>PROJECT</span>
+<strong>REELS / SHORTS / YOUTUBE / CINEMATIC</strong>
+</div>
+
+</div>
 
 </div>
 
@@ -1385,7 +1598,7 @@ MORE ABOUT US ↗
 <section class="cta">
 
 <div class="label">
-<span>05</span> START A PROJECT
+<span>07</span> START A PROJECT
 </div>
 
 <h2>
@@ -1399,7 +1612,7 @@ Have a video project in mind?
 Let's turn your idea into something powerful.
 </p>
 
-<a href="contact.html" class="btn btn-white">
+<a href="#contact" class="btn btn-white">
 LET'S CREATE ↗
 </a>
 
@@ -1414,7 +1627,7 @@ LET'S CREATE ↗
 
 <div>
 
-<a href="index.html" class="logo">
+<a href="#home" class="logo">
 <span class="logo-box">E</span>
 EDITORS
 </a>
@@ -1429,12 +1642,12 @@ presented by PRASHANT DIWAKAR.
 
 <div class="footer-links">
 
-<a href="services.html">SERVICES</a>
-<a href="portfolio.html">PORTFOLIO</a>
-<a href="capcut.html">CAPCUT PRO</a>
-<a href="about.html">ABOUT</a>
-<a href="pricing.html">PRICING</a>
-<a href="contact.html">CONTACT</a>
+<a href="#services">SERVICES</a>
+<a href="#portfolio">PORTFOLIO</a>
+<a href="#about">ABOUT</a>
+<a href="#pricing">PRICING</a>
+<a href="#contact">CONTACT</a>
+<a href="#home">BACK TO TOP ↑</a>
 
 </div>
 
@@ -1457,3 +1670,4 @@ PRESENTED BY PRASHANT DIWAKAR
 
 </body>
 </html>
+```
