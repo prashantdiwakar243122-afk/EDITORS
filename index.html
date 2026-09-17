@@ -32,8 +32,6 @@ body{
     overflow-x:hidden;
 }
 
-/* ================= NAVBAR ================= */
-
 nav{
     position:fixed;
     top:0;
@@ -83,8 +81,6 @@ nav a:hover{
     cursor:pointer;
 }
 
-/* ================= HERO ================= */
-
 .hero{
     min-height:100vh;
     display:flex;
@@ -128,8 +124,6 @@ nav a:hover{
     letter-spacing:2px;
 }
 
-/* ================= BUTTON ================= */
-
 .btn{
     display:inline-block;
     padding:15px 28px;
@@ -149,8 +143,6 @@ nav a:hover{
     transform:translateY(-2px);
 }
 
-/* ================= SECTION ================= */
-
 section{
     padding:100px 7%;
 }
@@ -168,8 +160,6 @@ section{
 .title p{
     color:#aaa;
 }
-
-/* ================= SERVICES ================= */
 
 .services{
     display:grid;
@@ -200,8 +190,6 @@ section{
     line-height:1.6;
 }
 
-/* ================= PORTFOLIO ================= */
-
 .portfolio{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -223,8 +211,6 @@ section{
     object-fit:cover;
     background:#000;
 }
-
-/* ================= CAPCUT ================= */
 
 .capcut-section{
     position:relative;
@@ -352,8 +338,6 @@ section{
     background:#ddd;
 }
 
-/* ================= ABOUT ================= */
-
 .about{
     max-width:850px;
     margin:auto;
@@ -369,8 +353,6 @@ section{
 .about strong{
     color:#fff;
 }
-
-/* ================= PRICING ================= */
 
 .pricing{
     display:grid;
@@ -403,8 +385,6 @@ section{
     line-height:2;
 }
 
-/* ================= CONTACT ================= */
-
 .contact{
     text-align:center;
     background:#0c0c0c;
@@ -419,8 +399,6 @@ section{
     color:#aaa;
     margin-bottom:30px;
 }
-
-/* ================= FOOTER ================= */
 
 footer{
     text-align:center;
@@ -442,8 +420,6 @@ footer{
     font-size:13px;
     color:#666;
 }
-
-/* ================= LOGIN ================= */
 
 .login-overlay{
     position:fixed;
@@ -615,8 +591,6 @@ footer{
     font-weight:bold;
 }
 
-/* ================= DASHBOARD ================= */
-
 .dashboard-section{
     display:none;
     background:#090909;
@@ -783,8 +757,6 @@ textarea.requirement-input{
     color:#888;
 }
 
-/* ================= MOBILE ================= */
-
 @media(max-width:700px){
 
     nav{
@@ -834,8 +806,6 @@ textarea.requirement-input{
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
-
 <nav>
 
     <div class="logo">EDITORS</div>
@@ -864,9 +834,6 @@ textarea.requirement-input{
     </div>
 
 </nav>
-
-
-<!-- ================= HERO ================= -->
 
 <section class="hero" id="home">
 
@@ -897,9 +864,6 @@ textarea.requirement-input{
     </div>
 
 </section>
-
-
-<!-- ================= SERVICES ================= -->
 
 <section id="services">
 
@@ -950,9 +914,6 @@ textarea.requirement-input{
 
 </section>
 
-
-<!-- ================= PORTFOLIO ================= -->
-
 <section id="portfolio">
 
     <div class="title">
@@ -989,9 +950,6 @@ textarea.requirement-input{
     </div>
 
 </section>
-
-
-<!-- ================= CAPCUT ================= -->
 
 <section class="capcut-section" id="capcut">
 
@@ -1102,9 +1060,6 @@ textarea.requirement-input{
 
 </section>
 
-
-<!-- ================= ABOUT ================= -->
-
 <section id="about">
 
     <div class="title">
@@ -1138,9 +1093,6 @@ textarea.requirement-input{
     </div>
 
 </section>
-
-
-<!-- ================= PRICING ================= -->
 
 <section>
 
@@ -1211,9 +1163,6 @@ textarea.requirement-input{
 
 </section>
 
-
-<!-- ================= DASHBOARD ================= -->
-
 <section
     class="dashboard-section"
     id="dashboard">
@@ -1233,8 +1182,6 @@ textarea.requirement-input{
     <div class="dashboard-box">
 
         <div class="dashboard-grid">
-
-            <!-- NEW REQUEST -->
 
             <div class="dashboard-card">
 
@@ -1310,9 +1257,6 @@ textarea.requirement-input{
 
             </div>
 
-
-            <!-- MY REQUESTS -->
-
             <div class="dashboard-card">
 
                 <h3>
@@ -1330,9 +1274,6 @@ textarea.requirement-input{
             </div>
 
         </div>
-
-
-        <!-- ================= ADMIN PANEL ================= -->
 
         <div
             id="adminPanel"
@@ -1367,9 +1308,6 @@ textarea.requirement-input{
     </div>
 
 </section>
-
-
-<!-- ================= CONTACT ================= -->
 
 <section
     class="contact"
@@ -1406,9 +1344,6 @@ textarea.requirement-input{
 
 </section>
 
-
-<!-- ================= FOOTER ================= -->
-
 <footer>
 
     <div class="footer-brand">
@@ -1425,9 +1360,6 @@ textarea.requirement-input{
 
 </footer>
 
-
-<!-- ================= LOGIN MODAL ================= -->
-
 <div
     class="login-overlay"
     id="loginOverlay">
@@ -1439,9 +1371,6 @@ textarea.requirement-input{
             id="loginClose">
             ×
         </button>
-
-
-        <!-- LOGIN -->
 
         <div id="loginForm">
 
@@ -1495,9 +1424,6 @@ textarea.requirement-input{
             </div>
 
         </div>
-
-
-        <!-- SIGNUP -->
 
         <div
             id="signupForm"
@@ -1553,9 +1479,6 @@ textarea.requirement-input{
             </div>
 
         </div>
-
-
-        <!-- USER PANEL -->
 
         <div
             class="user-panel"
@@ -1616,9 +1539,6 @@ textarea.requirement-input{
 
 </div>
 
-
-<!-- ================= FIREBASE ================= -->
-
 <script type="module">
 
 import { initializeApp }
@@ -1647,8 +1567,6 @@ import {
 from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
 
 
-/* ================= FIREBASE CONFIG ================= */
-
 const firebaseConfig = {
 
     apiKey:
@@ -1675,17 +1593,15 @@ const firebaseConfig = {
 };
 
 
-/* ================= INITIALIZE ================= */
-
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
 
-/* ================= ADMIN ================= */
+/* ================= ADMIN EMAIL ================= */
 
 const ADMIN_EMAIL =
-    "perashantdiwakar243122@gmail.com";
+    "prashantdiwakar243122@gmail.com";
 
 
 /* ================= ELEMENTS ================= */
@@ -1775,13 +1691,9 @@ const adminRequests =
     document.getElementById("adminRequests");
 
 
-/* ================= LISTENERS ================= */
-
 let clientUnsubscribe = null;
 let adminUnsubscribe = null;
 
-
-/* ================= ADMIN CHECK ================= */
 
 function isAdmin(user){
 
@@ -1798,16 +1710,12 @@ function isAdmin(user){
 }
 
 
-/* ================= LOGIN OPEN ================= */
-
 loginNavBtn.addEventListener("click", () => {
 
     loginOverlay.classList.add("active");
 
 });
 
-
-/* ================= LOGIN CLOSE ================= */
 
 loginClose.addEventListener("click", () => {
 
@@ -1827,8 +1735,6 @@ loginOverlay.addEventListener("click", (event) => {
 });
 
 
-/* ================= SIGNUP SCREEN ================= */
-
 showSignup.addEventListener("click", () => {
 
     loginForm.style.display = "none";
@@ -1843,8 +1749,6 @@ showSignup.addEventListener("click", () => {
 });
 
 
-/* ================= LOGIN SCREEN ================= */
-
 showLogin.addEventListener("click", () => {
 
     signupForm.style.display = "none";
@@ -1858,8 +1762,6 @@ showLogin.addEventListener("click", () => {
 
 });
 
-
-/* ================= OPEN DASHBOARD ================= */
 
 openDashboardBtn.addEventListener("click", () => {
 
@@ -1878,8 +1780,6 @@ openDashboardBtn.addEventListener("click", () => {
 });
 
 
-/* ================= OPEN ADMIN ================= */
-
 openAdminBtn.addEventListener("click", () => {
 
     loginOverlay.classList.remove("active");
@@ -1897,8 +1797,6 @@ openAdminBtn.addEventListener("click", () => {
 
 });
 
-
-/* ================= CREATE ACCOUNT ================= */
 
 signupBtn.addEventListener("click", async () => {
 
@@ -1965,8 +1863,6 @@ signupBtn.addEventListener("click", async () => {
 });
 
 
-/* ================= LOGIN ================= */
-
 loginBtn.addEventListener("click", async () => {
 
     const email =
@@ -2022,8 +1918,6 @@ loginBtn.addEventListener("click", async () => {
 });
 
 
-/* ================= LOGOUT ================= */
-
 logoutBtn.addEventListener("click", async () => {
 
     try{
@@ -2040,8 +1934,6 @@ logoutBtn.addEventListener("click", async () => {
 
 });
 
-
-/* ================= SUBMIT REQUEST ================= */
 
 submitRequestBtn.addEventListener("click", async () => {
 
@@ -2151,8 +2043,6 @@ submitRequestBtn.addEventListener("click", async () => {
 
 });
 
-
-/* ================= CLIENT REQUESTS ================= */
 
 function loadClientRequests(user){
 
@@ -2271,8 +2161,6 @@ function loadClientRequests(user){
 
 }
 
-
-/* ================= ADMIN REQUESTS ================= */
 
 function loadAdminRequests(){
 
@@ -2508,8 +2396,6 @@ function loadAdminRequests(){
 }
 
 
-/* ================= UPDATE REQUEST ================= */
-
 async function updateRequestStatus(
     requestId,
     status
@@ -2572,8 +2458,6 @@ async function updateRequestStatus(
 }
 
 
-/* ================= WHATSAPP ================= */
-
 function normalizeWhatsApp(number){
 
     let digits =
@@ -2635,8 +2519,6 @@ Thank you!`;
 
 }
 
-
-/* ================= AUTH STATE ================= */
 
 onAuthStateChanged(
     auth,
@@ -2709,8 +2591,6 @@ onAuthStateChanged(
 
             loadClientRequests(user);
 
-
-            /* ===== ADMIN ===== */
 
             if(admin){
 
@@ -2833,8 +2713,6 @@ onAuthStateChanged(
 );
 
 
-/* ================= ERROR HANDLER ================= */
-
 function getFirebaseError(error){
 
     switch(error.code){
@@ -2868,8 +2746,6 @@ function getFirebaseError(error){
 
 }
 
-
-/* ================= HTML SECURITY ================= */
 
 function escapeHTML(value){
 
